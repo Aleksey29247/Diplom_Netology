@@ -1,0 +1,450 @@
+[
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_status_processing_non_clickable.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_status_processing_non_clickable.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_3.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_3.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_arrow_back_large.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_arrow_back_large.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_container_list_claim.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/container_list_claim.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_main_menu_button.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_main_menu_button.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_background_splash_screen_title_2.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/background_splash_screen_title_2.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/menu_authorization.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/menu/authorization.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_salary.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_salary.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_rounded_corner.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/rounded_corner.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_open_claim.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_open_claim.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_arrow_back.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_arrow_back.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_4.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_4.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable-v24_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable-v24/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_container_list_news.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/container_list_news.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_background_splash_screen_title_3.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/background_splash_screen_title_3.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_item_claim.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_claim.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_splash_screen.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_splash_screen.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_11.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_11.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_add.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_1.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_1.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_warning_circle.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_warning_circle.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_baseline_check_24.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_baseline_check_24.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_17.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_17.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable-xhdpi_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable-xhdpi/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_create_edit_comment.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_create_edit_comment.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_our_mission_21x23.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_our_mission_21x23.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_separator.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/separator.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_filter_news.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_filter_news.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_authorization.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_authorization.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_status_processing.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_status_processing.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_item_news.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_news.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_rectangle_381.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_rectangle_381.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_holiday.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_holiday.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_news_control_panel.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_news_control_panel.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_baseline_clear_24.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_baseline_clear_24.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_item_news_control_panel.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_news_control_panel.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_9.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_9.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_12.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_12.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable-mdpi_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable-mdpi/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_list_claim.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_list_claim.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_top_custom_app_bar.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/top_custom_app_bar.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_our_mission_item_title_background_rounded_corner.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/our_mission_item_title_background_rounded_corner.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_auth.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_6.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_6.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_news_list.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_news_list.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_sort_18.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_sort_18.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_massage.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_massage.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_dialog_comment_create.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_dialog_comment_create.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_background_splash_screen_title_5.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/background_splash_screen_title_5.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable-xxhdpi_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable-xxhdpi/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_create_edit_claim.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_create_edit_claim.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_pen.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_pen.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/menu_menu_claim_status_processing.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/menu/menu_claim_status_processing.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_icon_delete.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/icon_delete.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_7.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_7.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_about.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_about.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_item_comment.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_comment.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/menu_menu_main.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/menu/menu_main.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_14.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_14.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_our_mission.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_our_mission.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_main.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_filters_icon.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_filters_icon.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_gratitude.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_gratitude.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_fragment_create_edit_news.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_create_edit_news.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable-ldpi_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable-ldpi/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_pen_light.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_pen_light.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_icon_edit.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/icon_edit.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_background_splash_screen_title_6.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/background_splash_screen_title_6.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable-hdpi_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable-hdpi/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_claim_filtering_dialog.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/claim_filtering_dialog.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable-xxxhdpi_app_background_4000x4000.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable-xxxhdpi/app_background_4000x4000.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_8.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_8.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_union.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_union.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_empty_list_image.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/empty_list_image.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_13.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_13.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_expand_less_24.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/expand_less_24.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_5.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_5.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_our_mission_item_icon.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_our_mission_item_icon.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_10.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_10.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_birthday.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_birthday.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_item_our_mission.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_our_mission.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_16.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_16.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_image_splashscreen_2.jpg.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/image_splashscreen_2.jpg"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/navigation_nav_main.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/navigation/nav_main.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_help.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_help.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_expand_more_24.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/expand_more_24.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_background_splash_screen_title_4.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/background_splash_screen_title_4.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_activity_app.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/activity_app.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_in_hospice_trademark.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/in_hospice_trademark.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/raw_icon_advertisement.png.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/raw/icon_advertisement.png"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/layout_menu_item.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/layout/menu_item.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_background_splash_screen_title_1.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/background_splash_screen_title_1.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_launcher_background.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "ru.iteco.fmhandroid.app-merged_res-72:/drawable_ic_gray_triangle_arrow.xml.flat",
+        "source": "ru.iteco.fmhandroid.app-main-74:/drawable/ic_gray_triangle_arrow.xml"
+    }
+]

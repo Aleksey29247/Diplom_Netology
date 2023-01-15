@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "ru.iteco.fmhandroid.app-mergeDebugResources-70:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\8abb3188736fe9eb8ecbc5d9d34981c7\\transformed\\appcompat-1.6.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
