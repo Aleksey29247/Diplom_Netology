@@ -80,7 +80,7 @@ public abstract class Hilt_ClaimListFragment extends Fragment implements Generat
   @Override
   public LayoutInflater onGetLayoutInflater(Bundle savedInstanceState) {
     LayoutInflater inflater = super.onGetLayoutInflater(savedInstanceState);
-    return inflater.cloneInContext(FragmentComponentManager.createContextWrapper(inflater, this));
+    return LayoutInflater.from(FragmentComponentManager.createContextWrapper(inflater, this));
   }
 
   @Override

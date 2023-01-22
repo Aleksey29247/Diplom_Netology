@@ -2,7 +2,6 @@ package ru.iteco.fmhandroid.ui
 
 import android.os.Bundle
 import android.os.Parcelable
-import androidx.lifecycle.SavedStateHandle
 import androidx.navigation.NavArgs
 import java.io.Serializable
 import java.lang.UnsupportedOperationException
@@ -24,20 +23,8 @@ public data class CreateEditNewsFragmentArgs(
     return result
   }
 
-  @Suppress("CAST_NEVER_SUCCEEDS")
-  public fun toSavedStateHandle(): SavedStateHandle {
-    val result = SavedStateHandle()
-    if (Parcelable::class.java.isAssignableFrom(NewsWithCategory::class.java)) {
-      result.set("newsItemArg", this.newsItemArg as Parcelable?)
-    } else if (Serializable::class.java.isAssignableFrom(NewsWithCategory::class.java)) {
-      result.set("newsItemArg", this.newsItemArg as Serializable?)
-    }
-    return result
-  }
-
   public companion object {
     @JvmStatic
-    @Suppress("DEPRECATION")
     public fun fromBundle(bundle: Bundle): CreateEditNewsFragmentArgs {
       bundle.setClassLoader(CreateEditNewsFragmentArgs::class.java.classLoader)
       val __newsItemArg : NewsWithCategory?
@@ -45,24 +32,6 @@ public data class CreateEditNewsFragmentArgs(
         if (Parcelable::class.java.isAssignableFrom(NewsWithCategory::class.java) ||
             Serializable::class.java.isAssignableFrom(NewsWithCategory::class.java)) {
           __newsItemArg = bundle.get("newsItemArg") as NewsWithCategory?
-        } else {
-          throw UnsupportedOperationException(NewsWithCategory::class.java.name +
-              " must implement Parcelable or Serializable or must be an Enum.")
-        }
-      } else {
-        __newsItemArg = null
-      }
-      return CreateEditNewsFragmentArgs(__newsItemArg)
-    }
-
-    @JvmStatic
-    public fun fromSavedStateHandle(savedStateHandle: SavedStateHandle):
-        CreateEditNewsFragmentArgs {
-      val __newsItemArg : NewsWithCategory?
-      if (savedStateHandle.contains("newsItemArg")) {
-        if (Parcelable::class.java.isAssignableFrom(NewsWithCategory::class.java) ||
-            Serializable::class.java.isAssignableFrom(NewsWithCategory::class.java)) {
-          __newsItemArg = savedStateHandle.get<NewsWithCategory?>("newsItemArg")
         } else {
           throw UnsupportedOperationException(NewsWithCategory::class.java.name +
               " must implement Parcelable or Serializable or must be an Enum.")

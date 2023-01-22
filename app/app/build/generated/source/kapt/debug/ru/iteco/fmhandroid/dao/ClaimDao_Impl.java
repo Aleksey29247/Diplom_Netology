@@ -174,63 +174,67 @@ public final class ClaimDao_Impl implements ClaimDao {
             while(_cursor.moveToNext()) {
               final FullClaim _item;
               final Claim _tmpClaim;
-              final Integer _tmpId;
-              if (_cursor.isNull(_cursorIndexOfId)) {
-                _tmpId = null;
-              } else {
-                _tmpId = _cursor.getInt(_cursorIndexOfId);
+              if (! (_cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfTitle) && _cursor.isNull(_cursorIndexOfDescription) && _cursor.isNull(_cursorIndexOfCreatorId) && _cursor.isNull(_cursorIndexOfCreatorName) && _cursor.isNull(_cursorIndexOfExecutorId) && _cursor.isNull(_cursorIndexOfExecutorName) && _cursor.isNull(_cursorIndexOfCreateDate) && _cursor.isNull(_cursorIndexOfPlanExecuteDate) && _cursor.isNull(_cursorIndexOfFactExecuteDate) && _cursor.isNull(_cursorIndexOfStatus))) {
+                final Integer _tmpId;
+                if (_cursor.isNull(_cursorIndexOfId)) {
+                  _tmpId = null;
+                } else {
+                  _tmpId = _cursor.getInt(_cursorIndexOfId);
+                }
+                final String _tmpTitle;
+                if (_cursor.isNull(_cursorIndexOfTitle)) {
+                  _tmpTitle = null;
+                } else {
+                  _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+                }
+                final String _tmpDescription;
+                if (_cursor.isNull(_cursorIndexOfDescription)) {
+                  _tmpDescription = null;
+                } else {
+                  _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+                }
+                final int _tmpCreatorId;
+                _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
+                final String _tmpCreatorName;
+                if (_cursor.isNull(_cursorIndexOfCreatorName)) {
+                  _tmpCreatorName = null;
+                } else {
+                  _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
+                }
+                final Integer _tmpExecutorId;
+                if (_cursor.isNull(_cursorIndexOfExecutorId)) {
+                  _tmpExecutorId = null;
+                } else {
+                  _tmpExecutorId = _cursor.getInt(_cursorIndexOfExecutorId);
+                }
+                final String _tmpExecutorName;
+                if (_cursor.isNull(_cursorIndexOfExecutorName)) {
+                  _tmpExecutorName = null;
+                } else {
+                  _tmpExecutorName = _cursor.getString(_cursorIndexOfExecutorName);
+                }
+                final long _tmpCreateDate;
+                _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
+                final long _tmpPlanExecuteDate;
+                _tmpPlanExecuteDate = _cursor.getLong(_cursorIndexOfPlanExecuteDate);
+                final Long _tmpFactExecuteDate;
+                if (_cursor.isNull(_cursorIndexOfFactExecuteDate)) {
+                  _tmpFactExecuteDate = null;
+                } else {
+                  _tmpFactExecuteDate = _cursor.getLong(_cursorIndexOfFactExecuteDate);
+                }
+                final Claim.Status _tmpStatus;
+                final String _tmp;
+                if (_cursor.isNull(_cursorIndexOfStatus)) {
+                  _tmp = null;
+                } else {
+                  _tmp = _cursor.getString(_cursorIndexOfStatus);
+                }
+                _tmpStatus = __claimClaimStatusConverter.toClaimStatus(_tmp);
+                _tmpClaim = new Claim(_tmpId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpExecutorId,_tmpExecutorName,_tmpCreateDate,_tmpPlanExecuteDate,_tmpFactExecuteDate,_tmpStatus);
+              }  else  {
+                _tmpClaim = null;
               }
-              final String _tmpTitle;
-              if (_cursor.isNull(_cursorIndexOfTitle)) {
-                _tmpTitle = null;
-              } else {
-                _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-              }
-              final String _tmpDescription;
-              if (_cursor.isNull(_cursorIndexOfDescription)) {
-                _tmpDescription = null;
-              } else {
-                _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-              }
-              final int _tmpCreatorId;
-              _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
-              final String _tmpCreatorName;
-              if (_cursor.isNull(_cursorIndexOfCreatorName)) {
-                _tmpCreatorName = null;
-              } else {
-                _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
-              }
-              final Integer _tmpExecutorId;
-              if (_cursor.isNull(_cursorIndexOfExecutorId)) {
-                _tmpExecutorId = null;
-              } else {
-                _tmpExecutorId = _cursor.getInt(_cursorIndexOfExecutorId);
-              }
-              final String _tmpExecutorName;
-              if (_cursor.isNull(_cursorIndexOfExecutorName)) {
-                _tmpExecutorName = null;
-              } else {
-                _tmpExecutorName = _cursor.getString(_cursorIndexOfExecutorName);
-              }
-              final long _tmpCreateDate;
-              _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
-              final long _tmpPlanExecuteDate;
-              _tmpPlanExecuteDate = _cursor.getLong(_cursorIndexOfPlanExecuteDate);
-              final Long _tmpFactExecuteDate;
-              if (_cursor.isNull(_cursorIndexOfFactExecuteDate)) {
-                _tmpFactExecuteDate = null;
-              } else {
-                _tmpFactExecuteDate = _cursor.getLong(_cursorIndexOfFactExecuteDate);
-              }
-              final Claim.Status _tmpStatus;
-              final String _tmp;
-              if (_cursor.isNull(_cursorIndexOfStatus)) {
-                _tmp = null;
-              } else {
-                _tmp = _cursor.getString(_cursorIndexOfStatus);
-              }
-              _tmpStatus = __claimClaimStatusConverter.toClaimStatus(_tmp);
-              _tmpClaim = new Claim(_tmpId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpExecutorId,_tmpExecutorName,_tmpCreateDate,_tmpPlanExecuteDate,_tmpFactExecuteDate,_tmpStatus);
               ArrayList<ClaimComment> _tmpCommentsCollection_1 = null;
               if (!_cursor.isNull(_cursorIndexOfId)) {
                 final long _tmpKey_1 = _cursor.getLong(_cursorIndexOfId);
@@ -317,63 +321,67 @@ public final class ClaimDao_Impl implements ClaimDao {
             while(_cursor.moveToNext()) {
               final FullClaim _item_1;
               final Claim _tmpClaim;
-              final Integer _tmpId;
-              if (_cursor.isNull(_cursorIndexOfId)) {
-                _tmpId = null;
-              } else {
-                _tmpId = _cursor.getInt(_cursorIndexOfId);
+              if (! (_cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfTitle) && _cursor.isNull(_cursorIndexOfDescription) && _cursor.isNull(_cursorIndexOfCreatorId) && _cursor.isNull(_cursorIndexOfCreatorName) && _cursor.isNull(_cursorIndexOfExecutorId) && _cursor.isNull(_cursorIndexOfExecutorName) && _cursor.isNull(_cursorIndexOfCreateDate) && _cursor.isNull(_cursorIndexOfPlanExecuteDate) && _cursor.isNull(_cursorIndexOfFactExecuteDate) && _cursor.isNull(_cursorIndexOfStatus))) {
+                final Integer _tmpId;
+                if (_cursor.isNull(_cursorIndexOfId)) {
+                  _tmpId = null;
+                } else {
+                  _tmpId = _cursor.getInt(_cursorIndexOfId);
+                }
+                final String _tmpTitle;
+                if (_cursor.isNull(_cursorIndexOfTitle)) {
+                  _tmpTitle = null;
+                } else {
+                  _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+                }
+                final String _tmpDescription;
+                if (_cursor.isNull(_cursorIndexOfDescription)) {
+                  _tmpDescription = null;
+                } else {
+                  _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+                }
+                final int _tmpCreatorId;
+                _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
+                final String _tmpCreatorName;
+                if (_cursor.isNull(_cursorIndexOfCreatorName)) {
+                  _tmpCreatorName = null;
+                } else {
+                  _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
+                }
+                final Integer _tmpExecutorId;
+                if (_cursor.isNull(_cursorIndexOfExecutorId)) {
+                  _tmpExecutorId = null;
+                } else {
+                  _tmpExecutorId = _cursor.getInt(_cursorIndexOfExecutorId);
+                }
+                final String _tmpExecutorName;
+                if (_cursor.isNull(_cursorIndexOfExecutorName)) {
+                  _tmpExecutorName = null;
+                } else {
+                  _tmpExecutorName = _cursor.getString(_cursorIndexOfExecutorName);
+                }
+                final long _tmpCreateDate;
+                _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
+                final long _tmpPlanExecuteDate;
+                _tmpPlanExecuteDate = _cursor.getLong(_cursorIndexOfPlanExecuteDate);
+                final Long _tmpFactExecuteDate;
+                if (_cursor.isNull(_cursorIndexOfFactExecuteDate)) {
+                  _tmpFactExecuteDate = null;
+                } else {
+                  _tmpFactExecuteDate = _cursor.getLong(_cursorIndexOfFactExecuteDate);
+                }
+                final Claim.Status _tmpStatus;
+                final String _tmp_1;
+                if (_cursor.isNull(_cursorIndexOfStatus)) {
+                  _tmp_1 = null;
+                } else {
+                  _tmp_1 = _cursor.getString(_cursorIndexOfStatus);
+                }
+                _tmpStatus = __claimClaimStatusConverter.toClaimStatus(_tmp_1);
+                _tmpClaim = new Claim(_tmpId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpExecutorId,_tmpExecutorName,_tmpCreateDate,_tmpPlanExecuteDate,_tmpFactExecuteDate,_tmpStatus);
+              }  else  {
+                _tmpClaim = null;
               }
-              final String _tmpTitle;
-              if (_cursor.isNull(_cursorIndexOfTitle)) {
-                _tmpTitle = null;
-              } else {
-                _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-              }
-              final String _tmpDescription;
-              if (_cursor.isNull(_cursorIndexOfDescription)) {
-                _tmpDescription = null;
-              } else {
-                _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-              }
-              final int _tmpCreatorId;
-              _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
-              final String _tmpCreatorName;
-              if (_cursor.isNull(_cursorIndexOfCreatorName)) {
-                _tmpCreatorName = null;
-              } else {
-                _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
-              }
-              final Integer _tmpExecutorId;
-              if (_cursor.isNull(_cursorIndexOfExecutorId)) {
-                _tmpExecutorId = null;
-              } else {
-                _tmpExecutorId = _cursor.getInt(_cursorIndexOfExecutorId);
-              }
-              final String _tmpExecutorName;
-              if (_cursor.isNull(_cursorIndexOfExecutorName)) {
-                _tmpExecutorName = null;
-              } else {
-                _tmpExecutorName = _cursor.getString(_cursorIndexOfExecutorName);
-              }
-              final long _tmpCreateDate;
-              _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
-              final long _tmpPlanExecuteDate;
-              _tmpPlanExecuteDate = _cursor.getLong(_cursorIndexOfPlanExecuteDate);
-              final Long _tmpFactExecuteDate;
-              if (_cursor.isNull(_cursorIndexOfFactExecuteDate)) {
-                _tmpFactExecuteDate = null;
-              } else {
-                _tmpFactExecuteDate = _cursor.getLong(_cursorIndexOfFactExecuteDate);
-              }
-              final Claim.Status _tmpStatus;
-              final String _tmp_1;
-              if (_cursor.isNull(_cursorIndexOfStatus)) {
-                _tmp_1 = null;
-              } else {
-                _tmp_1 = _cursor.getString(_cursorIndexOfStatus);
-              }
-              _tmpStatus = __claimClaimStatusConverter.toClaimStatus(_tmp_1);
-              _tmpClaim = new Claim(_tmpId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpExecutorId,_tmpExecutorName,_tmpCreateDate,_tmpPlanExecuteDate,_tmpFactExecuteDate,_tmpStatus);
               ArrayList<ClaimComment> _tmpCommentsCollection_1 = null;
               if (!_cursor.isNull(_cursorIndexOfId)) {
                 final long _tmpKey_1 = _cursor.getLong(_cursorIndexOfId);
@@ -442,63 +450,67 @@ public final class ClaimDao_Impl implements ClaimDao {
             final FullClaim _result;
             if(_cursor.moveToFirst()) {
               final Claim _tmpClaim;
-              final Integer _tmpId;
-              if (_cursor.isNull(_cursorIndexOfId)) {
-                _tmpId = null;
-              } else {
-                _tmpId = _cursor.getInt(_cursorIndexOfId);
+              if (! (_cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfTitle) && _cursor.isNull(_cursorIndexOfDescription) && _cursor.isNull(_cursorIndexOfCreatorId) && _cursor.isNull(_cursorIndexOfCreatorName) && _cursor.isNull(_cursorIndexOfExecutorId) && _cursor.isNull(_cursorIndexOfExecutorName) && _cursor.isNull(_cursorIndexOfCreateDate) && _cursor.isNull(_cursorIndexOfPlanExecuteDate) && _cursor.isNull(_cursorIndexOfFactExecuteDate) && _cursor.isNull(_cursorIndexOfStatus))) {
+                final Integer _tmpId;
+                if (_cursor.isNull(_cursorIndexOfId)) {
+                  _tmpId = null;
+                } else {
+                  _tmpId = _cursor.getInt(_cursorIndexOfId);
+                }
+                final String _tmpTitle;
+                if (_cursor.isNull(_cursorIndexOfTitle)) {
+                  _tmpTitle = null;
+                } else {
+                  _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+                }
+                final String _tmpDescription;
+                if (_cursor.isNull(_cursorIndexOfDescription)) {
+                  _tmpDescription = null;
+                } else {
+                  _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+                }
+                final int _tmpCreatorId;
+                _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
+                final String _tmpCreatorName;
+                if (_cursor.isNull(_cursorIndexOfCreatorName)) {
+                  _tmpCreatorName = null;
+                } else {
+                  _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
+                }
+                final Integer _tmpExecutorId;
+                if (_cursor.isNull(_cursorIndexOfExecutorId)) {
+                  _tmpExecutorId = null;
+                } else {
+                  _tmpExecutorId = _cursor.getInt(_cursorIndexOfExecutorId);
+                }
+                final String _tmpExecutorName;
+                if (_cursor.isNull(_cursorIndexOfExecutorName)) {
+                  _tmpExecutorName = null;
+                } else {
+                  _tmpExecutorName = _cursor.getString(_cursorIndexOfExecutorName);
+                }
+                final long _tmpCreateDate;
+                _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
+                final long _tmpPlanExecuteDate;
+                _tmpPlanExecuteDate = _cursor.getLong(_cursorIndexOfPlanExecuteDate);
+                final Long _tmpFactExecuteDate;
+                if (_cursor.isNull(_cursorIndexOfFactExecuteDate)) {
+                  _tmpFactExecuteDate = null;
+                } else {
+                  _tmpFactExecuteDate = _cursor.getLong(_cursorIndexOfFactExecuteDate);
+                }
+                final Claim.Status _tmpStatus;
+                final String _tmp;
+                if (_cursor.isNull(_cursorIndexOfStatus)) {
+                  _tmp = null;
+                } else {
+                  _tmp = _cursor.getString(_cursorIndexOfStatus);
+                }
+                _tmpStatus = __claimClaimStatusConverter.toClaimStatus(_tmp);
+                _tmpClaim = new Claim(_tmpId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpExecutorId,_tmpExecutorName,_tmpCreateDate,_tmpPlanExecuteDate,_tmpFactExecuteDate,_tmpStatus);
+              }  else  {
+                _tmpClaim = null;
               }
-              final String _tmpTitle;
-              if (_cursor.isNull(_cursorIndexOfTitle)) {
-                _tmpTitle = null;
-              } else {
-                _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-              }
-              final String _tmpDescription;
-              if (_cursor.isNull(_cursorIndexOfDescription)) {
-                _tmpDescription = null;
-              } else {
-                _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-              }
-              final int _tmpCreatorId;
-              _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
-              final String _tmpCreatorName;
-              if (_cursor.isNull(_cursorIndexOfCreatorName)) {
-                _tmpCreatorName = null;
-              } else {
-                _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
-              }
-              final Integer _tmpExecutorId;
-              if (_cursor.isNull(_cursorIndexOfExecutorId)) {
-                _tmpExecutorId = null;
-              } else {
-                _tmpExecutorId = _cursor.getInt(_cursorIndexOfExecutorId);
-              }
-              final String _tmpExecutorName;
-              if (_cursor.isNull(_cursorIndexOfExecutorName)) {
-                _tmpExecutorName = null;
-              } else {
-                _tmpExecutorName = _cursor.getString(_cursorIndexOfExecutorName);
-              }
-              final long _tmpCreateDate;
-              _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
-              final long _tmpPlanExecuteDate;
-              _tmpPlanExecuteDate = _cursor.getLong(_cursorIndexOfPlanExecuteDate);
-              final Long _tmpFactExecuteDate;
-              if (_cursor.isNull(_cursorIndexOfFactExecuteDate)) {
-                _tmpFactExecuteDate = null;
-              } else {
-                _tmpFactExecuteDate = _cursor.getLong(_cursorIndexOfFactExecuteDate);
-              }
-              final Claim.Status _tmpStatus;
-              final String _tmp;
-              if (_cursor.isNull(_cursorIndexOfStatus)) {
-                _tmp = null;
-              } else {
-                _tmp = _cursor.getString(_cursorIndexOfStatus);
-              }
-              _tmpStatus = __claimClaimStatusConverter.toClaimStatus(_tmp);
-              _tmpClaim = new Claim(_tmpId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpExecutorId,_tmpExecutorName,_tmpCreateDate,_tmpPlanExecuteDate,_tmpFactExecuteDate,_tmpStatus);
               ArrayList<ClaimComment> _tmpCommentsCollection_1 = null;
               if (!_cursor.isNull(_cursorIndexOfId)) {
                 final long _tmpKey_1 = _cursor.getLong(_cursorIndexOfId);

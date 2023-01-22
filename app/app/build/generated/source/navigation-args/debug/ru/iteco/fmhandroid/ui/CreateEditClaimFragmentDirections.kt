@@ -14,22 +14,22 @@ public class CreateEditClaimFragmentDirections private constructor() {
   private data class ActionCreateEditClaimFragmentToOpenClaimFragment(
     public val argClaim: FullClaim
   ) : NavDirections {
-    public override val actionId: Int = R.id.action_createEditClaimFragment_to_openClaimFragment
+    public override fun getActionId(): Int =
+        R.id.action_createEditClaimFragment_to_openClaimFragment
 
-    public override val arguments: Bundle
-      @Suppress("CAST_NEVER_SUCCEEDS")
-      get() {
-        val result = Bundle()
-        if (Parcelable::class.java.isAssignableFrom(FullClaim::class.java)) {
-          result.putParcelable("argClaim", this.argClaim as Parcelable)
-        } else if (Serializable::class.java.isAssignableFrom(FullClaim::class.java)) {
-          result.putSerializable("argClaim", this.argClaim as Serializable)
-        } else {
-          throw UnsupportedOperationException(FullClaim::class.java.name +
-              " must implement Parcelable or Serializable or must be an Enum.")
-        }
-        return result
+    @Suppress("CAST_NEVER_SUCCEEDS")
+    public override fun getArguments(): Bundle {
+      val result = Bundle()
+      if (Parcelable::class.java.isAssignableFrom(FullClaim::class.java)) {
+        result.putParcelable("argClaim", this.argClaim as Parcelable)
+      } else if (Serializable::class.java.isAssignableFrom(FullClaim::class.java)) {
+        result.putSerializable("argClaim", this.argClaim as Serializable)
+      } else {
+        throw UnsupportedOperationException(FullClaim::class.java.name +
+            " must implement Parcelable or Serializable or must be an Enum.")
       }
+      return result
+    }
   }
 
   public companion object {

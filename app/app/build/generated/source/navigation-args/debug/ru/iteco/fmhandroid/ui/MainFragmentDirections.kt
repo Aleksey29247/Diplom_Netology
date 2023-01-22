@@ -16,61 +16,58 @@ public class MainFragmentDirections private constructor() {
   private data class ActionMainFragmentToNewsListFragment(
     public val newsFilterArgs: NewsFilterArgs?
   ) : NavDirections {
-    public override val actionId: Int = R.id.action_mainFragment_to_newsListFragment
+    public override fun getActionId(): Int = R.id.action_mainFragment_to_newsListFragment
 
-    public override val arguments: Bundle
-      @Suppress("CAST_NEVER_SUCCEEDS")
-      get() {
-        val result = Bundle()
-        if (Parcelable::class.java.isAssignableFrom(NewsFilterArgs::class.java)) {
-          result.putParcelable("newsFilterArgs", this.newsFilterArgs as Parcelable?)
-        } else if (Serializable::class.java.isAssignableFrom(NewsFilterArgs::class.java)) {
-          result.putSerializable("newsFilterArgs", this.newsFilterArgs as Serializable?)
-        } else {
-          throw UnsupportedOperationException(NewsFilterArgs::class.java.name +
-              " must implement Parcelable or Serializable or must be an Enum.")
-        }
-        return result
+    @Suppress("CAST_NEVER_SUCCEEDS")
+    public override fun getArguments(): Bundle {
+      val result = Bundle()
+      if (Parcelable::class.java.isAssignableFrom(NewsFilterArgs::class.java)) {
+        result.putParcelable("newsFilterArgs", this.newsFilterArgs as Parcelable?)
+      } else if (Serializable::class.java.isAssignableFrom(NewsFilterArgs::class.java)) {
+        result.putSerializable("newsFilterArgs", this.newsFilterArgs as Serializable?)
+      } else {
+        throw UnsupportedOperationException(NewsFilterArgs::class.java.name +
+            " must implement Parcelable or Serializable or must be an Enum.")
       }
+      return result
+    }
   }
 
   private data class ActionMainFragmentToOpenClaimFragment(
     public val argClaim: FullClaim
   ) : NavDirections {
-    public override val actionId: Int = R.id.action_mainFragment_to_openClaimFragment
+    public override fun getActionId(): Int = R.id.action_mainFragment_to_openClaimFragment
 
-    public override val arguments: Bundle
-      @Suppress("CAST_NEVER_SUCCEEDS")
-      get() {
-        val result = Bundle()
-        if (Parcelable::class.java.isAssignableFrom(FullClaim::class.java)) {
-          result.putParcelable("argClaim", this.argClaim as Parcelable)
-        } else if (Serializable::class.java.isAssignableFrom(FullClaim::class.java)) {
-          result.putSerializable("argClaim", this.argClaim as Serializable)
-        } else {
-          throw UnsupportedOperationException(FullClaim::class.java.name +
-              " must implement Parcelable or Serializable or must be an Enum.")
-        }
-        return result
+    @Suppress("CAST_NEVER_SUCCEEDS")
+    public override fun getArguments(): Bundle {
+      val result = Bundle()
+      if (Parcelable::class.java.isAssignableFrom(FullClaim::class.java)) {
+        result.putParcelable("argClaim", this.argClaim as Parcelable)
+      } else if (Serializable::class.java.isAssignableFrom(FullClaim::class.java)) {
+        result.putSerializable("argClaim", this.argClaim as Serializable)
+      } else {
+        throw UnsupportedOperationException(FullClaim::class.java.name +
+            " must implement Parcelable or Serializable or must be an Enum.")
       }
+      return result
+    }
   }
 
   private data class ActionMainFragmentToCreateEditClaimFragment(
     public val argClaim: FullClaim? = null
   ) : NavDirections {
-    public override val actionId: Int = R.id.action_mainFragment_to_createEditClaimFragment
+    public override fun getActionId(): Int = R.id.action_mainFragment_to_createEditClaimFragment
 
-    public override val arguments: Bundle
-      @Suppress("CAST_NEVER_SUCCEEDS")
-      get() {
-        val result = Bundle()
-        if (Parcelable::class.java.isAssignableFrom(FullClaim::class.java)) {
-          result.putParcelable("argClaim", this.argClaim as Parcelable?)
-        } else if (Serializable::class.java.isAssignableFrom(FullClaim::class.java)) {
-          result.putSerializable("argClaim", this.argClaim as Serializable?)
-        }
-        return result
+    @Suppress("CAST_NEVER_SUCCEEDS")
+    public override fun getArguments(): Bundle {
+      val result = Bundle()
+      if (Parcelable::class.java.isAssignableFrom(FullClaim::class.java)) {
+        result.putParcelable("argClaim", this.argClaim as Parcelable?)
+      } else if (Serializable::class.java.isAssignableFrom(FullClaim::class.java)) {
+        result.putSerializable("argClaim", this.argClaim as Serializable?)
       }
+      return result
+    }
   }
 
   public companion object {

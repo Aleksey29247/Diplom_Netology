@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "ru.iteco.fmhandroid.app-mergeDebugResources-70:/values-port/values-port.xml",
+            "outputFile": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\8abb3188736fe9eb8ecbc5d9d34981c7\\transformed\\appcompat-1.6.0\\res\\values-port\\values-port.xml",
+                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\4eb6b48540e0112e48efce03245b1eef\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

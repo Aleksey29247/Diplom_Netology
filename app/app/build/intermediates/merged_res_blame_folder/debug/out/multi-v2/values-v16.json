@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "ru.iteco.fmhandroid.app-mergeDebugResources-70:/values-v16/values-v16.xml",
+            "outputFile": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\7d11666cff7bb406878f0eda386b20d1\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\26585488cb3898f0757cdedc35ffe3cb\\transformed\\core-1.7.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\8abb3188736fe9eb8ecbc5d9d34981c7\\transformed\\appcompat-1.6.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\4eb6b48540e0112e48efce03245b1eef\\transformed\\appcompat-1.4.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

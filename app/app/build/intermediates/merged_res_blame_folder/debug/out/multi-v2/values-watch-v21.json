@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "ru.iteco.fmhandroid.app-mergeDebugResources-70:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\8abb3188736fe9eb8ecbc5d9d34981c7\\transformed\\appcompat-1.6.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\4eb6b48540e0112e48efce03245b1eef\\transformed\\appcompat-1.4.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

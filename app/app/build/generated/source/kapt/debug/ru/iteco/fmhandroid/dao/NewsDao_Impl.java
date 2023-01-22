@@ -263,47 +263,51 @@ public final class NewsDao_Impl implements NewsDao {
             while(_cursor.moveToNext()) {
               final NewsWithCategory _item;
               final News _tmpNewsItem;
-              final Integer _tmpId;
-              if (_cursor.isNull(_cursorIndexOfId)) {
-                _tmpId = null;
-              } else {
-                _tmpId = _cursor.getInt(_cursorIndexOfId);
+              if (! (_cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfNewsCategoryId) && _cursor.isNull(_cursorIndexOfTitle) && _cursor.isNull(_cursorIndexOfDescription) && _cursor.isNull(_cursorIndexOfCreatorId) && _cursor.isNull(_cursorIndexOfCreatorName) && _cursor.isNull(_cursorIndexOfCreateDate) && _cursor.isNull(_cursorIndexOfPublishDate) && _cursor.isNull(_cursorIndexOfPublishEnabled) && _cursor.isNull(_cursorIndexOfIsOpen))) {
+                final Integer _tmpId;
+                if (_cursor.isNull(_cursorIndexOfId)) {
+                  _tmpId = null;
+                } else {
+                  _tmpId = _cursor.getInt(_cursorIndexOfId);
+                }
+                final int _tmpNewsCategoryId;
+                _tmpNewsCategoryId = _cursor.getInt(_cursorIndexOfNewsCategoryId);
+                final String _tmpTitle;
+                if (_cursor.isNull(_cursorIndexOfTitle)) {
+                  _tmpTitle = null;
+                } else {
+                  _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+                }
+                final String _tmpDescription;
+                if (_cursor.isNull(_cursorIndexOfDescription)) {
+                  _tmpDescription = null;
+                } else {
+                  _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+                }
+                final int _tmpCreatorId;
+                _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
+                final String _tmpCreatorName;
+                if (_cursor.isNull(_cursorIndexOfCreatorName)) {
+                  _tmpCreatorName = null;
+                } else {
+                  _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
+                }
+                final long _tmpCreateDate;
+                _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
+                final long _tmpPublishDate;
+                _tmpPublishDate = _cursor.getLong(_cursorIndexOfPublishDate);
+                final boolean _tmpPublishEnabled;
+                final int _tmp_4;
+                _tmp_4 = _cursor.getInt(_cursorIndexOfPublishEnabled);
+                _tmpPublishEnabled = _tmp_4 != 0;
+                final boolean _tmpIsOpen;
+                final int _tmp_5;
+                _tmp_5 = _cursor.getInt(_cursorIndexOfIsOpen);
+                _tmpIsOpen = _tmp_5 != 0;
+                _tmpNewsItem = new News(_tmpId,_tmpNewsCategoryId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpCreateDate,_tmpPublishDate,_tmpPublishEnabled,_tmpIsOpen);
+              }  else  {
+                _tmpNewsItem = null;
               }
-              final int _tmpNewsCategoryId;
-              _tmpNewsCategoryId = _cursor.getInt(_cursorIndexOfNewsCategoryId);
-              final String _tmpTitle;
-              if (_cursor.isNull(_cursorIndexOfTitle)) {
-                _tmpTitle = null;
-              } else {
-                _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-              }
-              final String _tmpDescription;
-              if (_cursor.isNull(_cursorIndexOfDescription)) {
-                _tmpDescription = null;
-              } else {
-                _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-              }
-              final int _tmpCreatorId;
-              _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
-              final String _tmpCreatorName;
-              if (_cursor.isNull(_cursorIndexOfCreatorName)) {
-                _tmpCreatorName = null;
-              } else {
-                _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
-              }
-              final long _tmpCreateDate;
-              _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
-              final long _tmpPublishDate;
-              _tmpPublishDate = _cursor.getLong(_cursorIndexOfPublishDate);
-              final boolean _tmpPublishEnabled;
-              final int _tmp_4;
-              _tmp_4 = _cursor.getInt(_cursorIndexOfPublishEnabled);
-              _tmpPublishEnabled = _tmp_4 != 0;
-              final boolean _tmpIsOpen;
-              final int _tmp_5;
-              _tmp_5 = _cursor.getInt(_cursorIndexOfIsOpen);
-              _tmpIsOpen = _tmp_5 != 0;
-              _tmpNewsItem = new News(_tmpId,_tmpNewsCategoryId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpCreateDate,_tmpPublishDate,_tmpPublishEnabled,_tmpIsOpen);
               News.Category _tmpCategory = null;
               final long _tmpKey_1 = _cursor.getLong(_cursorIndexOfNewsCategoryId);
               _tmpCategory = _collectionCategory.get(_tmpKey_1);
@@ -360,47 +364,51 @@ public final class NewsDao_Impl implements NewsDao {
             while(_cursor.moveToNext()) {
               final NewsWithCategory _item;
               final News _tmpNewsItem;
-              final Integer _tmpId;
-              if (_cursor.isNull(_cursorIndexOfId)) {
-                _tmpId = null;
-              } else {
-                _tmpId = _cursor.getInt(_cursorIndexOfId);
+              if (! (_cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfNewsCategoryId) && _cursor.isNull(_cursorIndexOfTitle) && _cursor.isNull(_cursorIndexOfDescription) && _cursor.isNull(_cursorIndexOfCreatorId) && _cursor.isNull(_cursorIndexOfCreatorName) && _cursor.isNull(_cursorIndexOfCreateDate) && _cursor.isNull(_cursorIndexOfPublishDate) && _cursor.isNull(_cursorIndexOfPublishEnabled) && _cursor.isNull(_cursorIndexOfIsOpen))) {
+                final Integer _tmpId;
+                if (_cursor.isNull(_cursorIndexOfId)) {
+                  _tmpId = null;
+                } else {
+                  _tmpId = _cursor.getInt(_cursorIndexOfId);
+                }
+                final int _tmpNewsCategoryId;
+                _tmpNewsCategoryId = _cursor.getInt(_cursorIndexOfNewsCategoryId);
+                final String _tmpTitle;
+                if (_cursor.isNull(_cursorIndexOfTitle)) {
+                  _tmpTitle = null;
+                } else {
+                  _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+                }
+                final String _tmpDescription;
+                if (_cursor.isNull(_cursorIndexOfDescription)) {
+                  _tmpDescription = null;
+                } else {
+                  _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+                }
+                final int _tmpCreatorId;
+                _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
+                final String _tmpCreatorName;
+                if (_cursor.isNull(_cursorIndexOfCreatorName)) {
+                  _tmpCreatorName = null;
+                } else {
+                  _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
+                }
+                final long _tmpCreateDate;
+                _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
+                final long _tmpPublishDate;
+                _tmpPublishDate = _cursor.getLong(_cursorIndexOfPublishDate);
+                final boolean _tmpPublishEnabled;
+                final int _tmp;
+                _tmp = _cursor.getInt(_cursorIndexOfPublishEnabled);
+                _tmpPublishEnabled = _tmp != 0;
+                final boolean _tmpIsOpen;
+                final int _tmp_1;
+                _tmp_1 = _cursor.getInt(_cursorIndexOfIsOpen);
+                _tmpIsOpen = _tmp_1 != 0;
+                _tmpNewsItem = new News(_tmpId,_tmpNewsCategoryId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpCreateDate,_tmpPublishDate,_tmpPublishEnabled,_tmpIsOpen);
+              }  else  {
+                _tmpNewsItem = null;
               }
-              final int _tmpNewsCategoryId;
-              _tmpNewsCategoryId = _cursor.getInt(_cursorIndexOfNewsCategoryId);
-              final String _tmpTitle;
-              if (_cursor.isNull(_cursorIndexOfTitle)) {
-                _tmpTitle = null;
-              } else {
-                _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-              }
-              final String _tmpDescription;
-              if (_cursor.isNull(_cursorIndexOfDescription)) {
-                _tmpDescription = null;
-              } else {
-                _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-              }
-              final int _tmpCreatorId;
-              _tmpCreatorId = _cursor.getInt(_cursorIndexOfCreatorId);
-              final String _tmpCreatorName;
-              if (_cursor.isNull(_cursorIndexOfCreatorName)) {
-                _tmpCreatorName = null;
-              } else {
-                _tmpCreatorName = _cursor.getString(_cursorIndexOfCreatorName);
-              }
-              final long _tmpCreateDate;
-              _tmpCreateDate = _cursor.getLong(_cursorIndexOfCreateDate);
-              final long _tmpPublishDate;
-              _tmpPublishDate = _cursor.getLong(_cursorIndexOfPublishDate);
-              final boolean _tmpPublishEnabled;
-              final int _tmp;
-              _tmp = _cursor.getInt(_cursorIndexOfPublishEnabled);
-              _tmpPublishEnabled = _tmp != 0;
-              final boolean _tmpIsOpen;
-              final int _tmp_1;
-              _tmp_1 = _cursor.getInt(_cursorIndexOfIsOpen);
-              _tmpIsOpen = _tmp_1 != 0;
-              _tmpNewsItem = new News(_tmpId,_tmpNewsCategoryId,_tmpTitle,_tmpDescription,_tmpCreatorId,_tmpCreatorName,_tmpCreateDate,_tmpPublishDate,_tmpPublishEnabled,_tmpIsOpen);
               News.Category _tmpCategory = null;
               final long _tmpKey_1 = _cursor.getLong(_cursorIndexOfNewsCategoryId);
               _tmpCategory = _collectionCategory.get(_tmpKey_1);

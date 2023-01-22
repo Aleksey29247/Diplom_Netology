@@ -8,12 +8,8 @@ import dagger.hilt.internal.aggregatedroot.AggregatedRoot;
  */
 @AggregatedRoot(
     root = "ru.iteco.fmhandroid.application.FhmApplication",
-    rootPackage = "ru.iteco.fmhandroid.application",
     originatingRoot = "ru.iteco.fmhandroid.application.FhmApplication",
-    originatingRootPackage = "ru.iteco.fmhandroid.application",
-    rootAnnotation = HiltAndroidApp.class,
-    rootSimpleNames = "FhmApplication",
-    originatingRootSimpleNames = "FhmApplication"
+    rootAnnotation = HiltAndroidApp.class
 )
 public class _ru_iteco_fmhandroid_application_FhmApplication {
 }

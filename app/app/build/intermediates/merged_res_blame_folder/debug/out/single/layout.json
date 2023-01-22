@@ -1,102 +1,102 @@
 [
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/container_list_claim.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/container_list_claim.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_main.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_main.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_open_claim.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_open_claim.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_our_mission.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\item_our_mission.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_auth.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_auth.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\container_list_claim.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\container_list_claim.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/item_news_control_panel.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_news_control_panel.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_list_claim.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_list_claim.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_about.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_about.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\menu_item.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\menu_item.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_list_claim.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_list_claim.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_news_control_panel.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\item_news_control_panel.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/container_list_news.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/container_list_news.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_app.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\activity_app.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/item_claim.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_claim.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\top_custom_app_bar.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\top_custom_app_bar.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/activity_app.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/activity_app.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_comment.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\item_comment.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_news_control_panel.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_news_control_panel.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_news_control_panel.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_news_control_panel.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/item_news.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_news.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_claim.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\item_claim.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_create_edit_comment.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_create_edit_comment.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_news.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\item_news.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_create_edit_news.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_create_edit_news.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_open_claim.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_open_claim.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_create_edit_claim.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_create_edit_claim.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_our_mission.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_our_mission.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_our_mission.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_our_mission.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_filter_news.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_filter_news.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/item_our_mission.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_our_mission.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\container_list_news.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\container_list_news.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_filter_news.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_filter_news.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_create_edit_claim.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_create_edit_claim.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_dialog_comment_create.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_dialog_comment_create.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_about.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_about.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/item_comment.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/item_comment.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_create_edit_comment.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_create_edit_comment.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_news_list.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_news_list.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_splash_screen.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_splash_screen.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/top_custom_app_bar.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/top_custom_app_bar.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\claim_filtering_dialog.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\claim_filtering_dialog.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/claim_filtering_dialog.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/claim_filtering_dialog.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dialog_comment_create.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_dialog_comment_create.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_splash_screen.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_splash_screen.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_auth.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_auth.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/menu_item.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/menu_item.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_create_edit_news.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_create_edit_news.xml"
     },
     {
-        "merged": "ru.iteco.fmhandroid.app-mergeDebugResources-71:/layout/fragment_main.xml",
-        "source": "ru.iteco.fmhandroid.app-main-74:/layout/fragment_main.xml"
+        "merged": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_news_list.xml",
+        "source": "C:\\node\\Diplom_Netology\\app\\app\\src\\main\\res\\layout\\fragment_news_list.xml"
     }
 ]

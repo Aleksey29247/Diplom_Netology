@@ -80,7 +80,7 @@ public abstract class Hilt_CreateEditNewsFragment extends Fragment implements Ge
   @Override
   public LayoutInflater onGetLayoutInflater(Bundle savedInstanceState) {
     LayoutInflater inflater = super.onGetLayoutInflater(savedInstanceState);
-    return inflater.cloneInContext(FragmentComponentManager.createContextWrapper(inflater, this));
+    return LayoutInflater.from(FragmentComponentManager.createContextWrapper(inflater, this));
   }
 
   @Override

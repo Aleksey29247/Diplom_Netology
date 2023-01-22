@@ -73,7 +73,7 @@ public final class AppDb_Impl extends AppDb {
       }
 
       @Override
-      public void onCreate(SupportSQLiteDatabase _db) {
+      protected void onCreate(SupportSQLiteDatabase _db) {
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onCreate(_db);
@@ -102,7 +102,7 @@ public final class AppDb_Impl extends AppDb {
       }
 
       @Override
-      public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
+      protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsClaimEntity = new HashMap<String, TableInfo.Column>(11);
         _columnsClaimEntity.put("id", new TableInfo.Column("id", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsClaimEntity.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));

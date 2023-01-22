@@ -49,11 +49,11 @@ class OpenClaimFragment : Fragment() {
         claimCardViewModel.init(claimId)
 
         lifecycleScope.launchWhenResumed {
-            claimCardViewModel.openClaimCommentEvent.collect {    it ->
+            claimCardViewModel.openClaimCommentEvent.collect {
                 val action = OpenClaimFragmentDirections
                     .actionOpenClaimFragmentToCreateEditClaimCommentFragment(
                         it,
-                            it.claimId
+                        it.claimId
                     )
                 findNavController().navigate(action)
             }
