@@ -31,6 +31,25 @@
                         "endColumns": "97,94,94,97,87,87,87,87,86,86,86,86",
                         "endOffsets": "148,243,338,436,524,612,700,788,875,962,1049,1136"
                     }
+                },
+                {
+                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\3f8e62304c996349ffe5e559349e59a9\\transformed\\jetified-core-1.5.0\\res\\values-v28\\values.xml",
+                    "from": {
+                        "startLines": "4,13",
+                        "startColumns": "0,0",
+                        "startOffsets": "180,659",
+                        "endLines": "12,21",
+                        "endColumns": "8,8",
+                        "endOffsets": "658,1135"
+                    },
+                    "to": {
+                        "startLines": "24,33",
+                        "startColumns": "4,4",
+                        "startOffsets": "1775,2258",
+                        "endLines": "32,41",
+                        "endColumns": "8,8",
+                        "endOffsets": "2253,2734"
+                    }
                 }
             ]
         }

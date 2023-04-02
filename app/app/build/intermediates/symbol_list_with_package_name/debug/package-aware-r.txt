@@ -4499,6 +4499,8 @@ style ThemeOverlay_MaterialComponents_Toolbar_Surface
 style ThemeOverlayColorAccentRed
 style TopAppBarSubTitle
 style TopAppBarTitle
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
 style Widget_App_ShapeableImageView
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
