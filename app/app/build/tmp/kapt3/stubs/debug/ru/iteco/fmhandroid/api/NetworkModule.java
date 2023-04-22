@@ -20,25 +20,25 @@ public final class NetworkModule {
     }
     
     @org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.NonAuthorized()
+    @qualifier.NonAuthorized()
     @dagger.Provides()
     public final retrofit2.Retrofit provideNonAuthorizedRetrofit(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.NonAuthorized()
+    @qualifier.NonAuthorized()
     okhttp3.OkHttpClient client) {
         return null;
     }
     
     @org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Authorized()
+    @qualifier.Authorized()
     @dagger.Provides()
     public final retrofit2.Retrofit provideAuthorizedRetrofit(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Authorized()
+    @qualifier.Authorized()
     okhttp3.OkHttpClient client) {
         return null;
     }
     
     @org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Authorized()
+    @qualifier.Authorized()
     @dagger.Provides()
     public final okhttp3.OkHttpClient authorizedOkhttp(@org.jetbrains.annotations.NotNull()
     okhttp3.logging.HttpLoggingInterceptor interceptor, @org.jetbrains.annotations.NotNull()
@@ -48,7 +48,7 @@ public final class NetworkModule {
     }
     
     @org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.NonAuthorized()
+    @qualifier.NonAuthorized()
     @dagger.Provides()
     public final okhttp3.OkHttpClient nonAuthorizedOkhttp(@org.jetbrains.annotations.NotNull()
     okhttp3.logging.HttpLoggingInterceptor interceptor) {
@@ -56,7 +56,7 @@ public final class NetworkModule {
     }
     
     @org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Refresh()
+    @qualifier.Refresh()
     @dagger.Provides()
     public final okhttp3.OkHttpClient refreshOkhttp(@org.jetbrains.annotations.NotNull()
     okhttp3.logging.HttpLoggingInterceptor interceptor, @org.jetbrains.annotations.NotNull()
@@ -65,10 +65,10 @@ public final class NetworkModule {
     }
     
     @org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Refresh()
+    @qualifier.Refresh()
     @dagger.Provides()
     public final retrofit2.Retrofit provideRefreshRetrofit(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Refresh()
+    @qualifier.Refresh()
     okhttp3.OkHttpClient client) {
         return null;
     }

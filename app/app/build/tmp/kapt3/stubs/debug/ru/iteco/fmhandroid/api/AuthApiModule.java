@@ -17,7 +17,7 @@ public final class AuthApiModule {
     @javax.inject.Singleton()
     @dagger.Provides()
     public final ru.iteco.fmhandroid.api.AuthApi provideAuthApi(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.NonAuthorized()
+    @qualifier.NonAuthorized()
     retrofit2.Retrofit retrofit) {
         return null;
     }

@@ -10,7 +10,7 @@ import javax.inject.Provider;
 import retrofit2.Retrofit;
 
 @ScopeMetadata("javax.inject.Singleton")
-@QualifierMetadata("ru.iteco.fmhandroid.api.qualifier.Authorized")
+@QualifierMetadata("qualifier.Authorized")
 @DaggerGenerated
 @SuppressWarnings({
     "unchecked",

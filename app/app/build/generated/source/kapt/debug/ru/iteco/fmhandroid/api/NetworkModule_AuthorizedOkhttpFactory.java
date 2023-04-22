@@ -13,7 +13,7 @@ import ru.iteco.fmhandroid.auth.AppAuth;
 import ru.iteco.fmhandroid.repository.authRepository.AuthRepository;
 
 @ScopeMetadata
-@QualifierMetadata("ru.iteco.fmhandroid.api.qualifier.Authorized")
+@QualifierMetadata("qualifier.Authorized")
 @DaggerGenerated
 @SuppressWarnings({
     "unchecked",

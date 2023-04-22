@@ -4,7 +4,7 @@
             "outputFile": "C:\\node\\Diplom_Netology\\app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\4eb6b48540e0112e48efce03245b1eef\\transformed\\appcompat-1.4.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\gradle\\bin\\caches\\transforms-3\\430b117d98fee09dd65c54f0231c2ee1\\transformed\\appcompat-1.4.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

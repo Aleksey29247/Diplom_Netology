@@ -11,7 +11,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
 @ScopeMetadata
-@QualifierMetadata("ru.iteco.fmhandroid.api.qualifier.Refresh")
+@QualifierMetadata("qualifier.Refresh")
 @DaggerGenerated
 @SuppressWarnings({
     "unchecked",

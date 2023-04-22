@@ -1,7 +1,7 @@
-package ru.iteco.fmhandroid.api.qualifier
+package qualifier
 
 import javax.inject.Qualifier
 
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
-annotation class NonAuthorized
+annotation class Refresh

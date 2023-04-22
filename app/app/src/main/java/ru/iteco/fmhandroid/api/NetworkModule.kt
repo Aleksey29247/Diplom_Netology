@@ -9,9 +9,9 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import ru.iteco.fmhandroid.BuildConfig
-import ru.iteco.fmhandroid.api.qualifier.Authorized
-import ru.iteco.fmhandroid.api.qualifier.NonAuthorized
-import ru.iteco.fmhandroid.api.qualifier.Refresh
+import qualifier.Authorized
+import qualifier.NonAuthorized
+import qualifier.Refresh
 import ru.iteco.fmhandroid.auth.AppAuth
 import ru.iteco.fmhandroid.repository.authRepository.AuthRepository
 import javax.inject.Provider

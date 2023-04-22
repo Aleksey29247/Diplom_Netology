@@ -17,7 +17,7 @@ public final class ApiModule {
     @javax.inject.Singleton()
     @dagger.Provides()
     public final ru.iteco.fmhandroid.api.ClaimApi provideClaimApi(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Authorized()
+    @qualifier.Authorized()
     retrofit2.Retrofit retrofit) {
         return null;
     }
@@ -26,7 +26,7 @@ public final class ApiModule {
     @javax.inject.Singleton()
     @dagger.Provides()
     public final ru.iteco.fmhandroid.api.UserApi provideUserApi(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Authorized()
+    @qualifier.Authorized()
     retrofit2.Retrofit retrofit) {
         return null;
     }
@@ -35,7 +35,7 @@ public final class ApiModule {
     @javax.inject.Singleton()
     @dagger.Provides()
     public final ru.iteco.fmhandroid.api.NewsApi provideNewsApi(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Authorized()
+    @qualifier.Authorized()
     retrofit2.Retrofit retrofit) {
         return null;
     }

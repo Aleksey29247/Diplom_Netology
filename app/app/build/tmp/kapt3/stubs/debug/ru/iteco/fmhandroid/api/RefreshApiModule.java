@@ -17,7 +17,7 @@ public final class RefreshApiModule {
     @javax.inject.Singleton()
     @dagger.Provides()
     public final ru.iteco.fmhandroid.api.RefreshTokensApi provideRefreshTokensApi(@org.jetbrains.annotations.NotNull()
-    @ru.iteco.fmhandroid.api.qualifier.Refresh()
+    @qualifier.Refresh()
     retrofit2.Retrofit retrofit) {
         return null;
     }

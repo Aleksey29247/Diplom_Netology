@@ -12,7 +12,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import ru.iteco.fmhandroid.auth.AppAuth;
 
 @ScopeMetadata
-@QualifierMetadata("ru.iteco.fmhandroid.api.qualifier.Refresh")
+@QualifierMetadata("qualifier.Refresh")
 @DaggerGenerated
 @SuppressWarnings({
     "unchecked",
