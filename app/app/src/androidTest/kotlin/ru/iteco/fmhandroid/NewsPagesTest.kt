@@ -12,10 +12,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class NewsPagesTest
-{
+class NewsPagesTest {
     val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-
     var status = 0;
     val TIMEOUT = 15000L
     val packageName = MODEL_PACKAGE
@@ -31,44 +29,29 @@ class NewsPagesTest
     }
 
     @Before
-    fun NewsPages (){
+    fun NewsPages() {
         waitForPackage(packageName)
         device.findObject(By.res("ru.iteco.fmhandroid:id/main_menu_image_button")).click();
         Thread.sleep(2000)
-        ///menu_item_main
         device.findObject(By.text("News")).click()
         Thread.sleep(2000)
     }
 
 
     @Test
-    //sort_news_material_button
-    fun SortNewsMaterialButtonTest()
-    {
-
+    fun SortNewsMaterialButtonTest() {
         device.findObject(By.res("ru.iteco.fmhandroid:id/sort_news_material_button")).click();
         device.findObject(By.res("ru.iteco.fmhandroid:id/sort_news_material_button")).click();
-
         Thread.sleep(2000)
         assertEquals(device.findObject(By.text("Зарплата")).text, "Зарплата")
-        //waitForPackage(packageName)
-
     }
- @Test
- fun FilterNewsMaterialButtonTest()
- {
-     device.findObject(By.res("ru.iteco.fmhandroid:id/filter_news_material_button")).click();
-     Thread.sleep(2000)
-     assertEquals(device.findObject(By.text("Filter news")).text, "Filter news")
- }
 
-
-
-
-
-
-
-
+    @Test
+    fun FilterNewsMaterialButtonTest() {
+        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_news_material_button")).click();
+        Thread.sleep(2000)
+        assertEquals(device.findObject(By.text("Filter news")).text, "Filter news")
+    }
 
 
 }

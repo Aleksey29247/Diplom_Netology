@@ -1,4 +1,3 @@
-
 package ru.iteco.fmhandroid;
 
 import android.content.Context
@@ -16,7 +15,6 @@ import org.junit.runner.RunWith
 class AboutPagesTest {
 
     val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-
     var status = 0;
     val TIMEOUT = 15000L
     val packageName = MODEL_PACKAGE
@@ -32,7 +30,7 @@ class AboutPagesTest {
     }
 
     @Before
-    fun PagesAbout(){
+    fun PagesAbout() {
         waitForPackage(packageName)
         device.findObject(By.res("ru.iteco.fmhandroid:id/main_menu_image_button")).click();
         Thread.sleep(2000)
@@ -40,29 +38,28 @@ class AboutPagesTest {
         Thread.sleep(2000)
     }
 
-
     @Test
-    fun PrivacyPoliceTest(){
-        //
+    fun PrivacyPoliceTest() {
         device.findObject(By.text("https://vhospice.org/#/privacy-policy/")).click()
         Thread.sleep(2000)
-        //
-        assertEquals(device.findObject(By.res("org.chromium.webview_shell:id/url_field")).text,"https://vhospice.org/#/privacy-policy/")
-
+        assertEquals(
+            device.findObject(By.res("org.chromium.webview_shell:id/url_field")).text,
+            "https://vhospice.org/#/privacy-policy/"
+        )
     }
 
     @Test
-    fun TemsOfUseTest()
-    {
+    fun TemsOfUseTest() {
         device.findObject(By.text("https://vhospice.org/#/terms-of-use")).click()
         Thread.sleep(2000)
-        //
-        assertEquals(device.findObject(By.res("org.chromium.webview_shell:id/url_field")).text,"https://vhospice.org/#/terms-of-use")
+        assertEquals(
+            device.findObject(By.res("org.chromium.webview_shell:id/url_field")).text,
+            "https://vhospice.org/#/terms-of-use"
+        )
     }
-@After
- fun EndTest()
-{
-    device.pressBack()
- }
 
+    @After
+    fun EndTest() {
+        device.pressBack()
+    }
 }

@@ -12,17 +12,13 @@ import org.junit.runner.RunWith
 import org.junit.After
 
 
-
 @RunWith(AndroidJUnit4::class)
-class MainPagesTest
-{
+class MainPagesTest {
     val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-
     var status = 0;
     val TIMEOUT = 15000L
     val packageName = MODEL_PACKAGE
     private lateinit var device: UiDevice
-
     private fun waitForPackage(packageName: String) {
         device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         val context = ApplicationProvider.getApplicationContext<Context>()
@@ -33,16 +29,13 @@ class MainPagesTest
     }
 
     @Test
-    fun StringNewsTest()
-    {
+    fun StringNewsTest() {
         waitForPackage(packageName)
         device.findObject(By.text("News")).click()
     }
 
     @Test
-    fun ExpandMaterialButtonUpDownTest()
-    {
-        //expand_material_button
+    fun ExpandMaterialButtonUpDownTest() {
         waitForPackage(packageName)
         device.findObject(By.res(packageName, "expand_material_button")).click();
         Thread.sleep(2000)
@@ -51,16 +44,11 @@ class MainPagesTest
         assertEquals(device.findObject(By.text("ALL NEWS")).text, "ALL NEWS")
     }
 
-
-
     @Test
-    fun AllNewsTextViewTest()
-    {
+    fun AllNewsTextViewTest() {
         waitForPackage(packageName)
         device.findObject(By.res(packageName, "all_news_text_view")).click();
         Thread.sleep(1000)
         assertEquals(device.findObject(By.text("News")).text, "News")
     }
-
-
 }
