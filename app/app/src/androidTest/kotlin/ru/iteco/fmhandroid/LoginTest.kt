@@ -1,97 +1,73 @@
 package ru.iteco.fmhandroid
 
-
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.*
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.After
-
+import ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
 class LoginTest {
-    val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-    var status = 0;
-    val TIMEOUT = 15000L
-    private lateinit var device: UiDevice
-    val packageName = MODEL_PACKAGE
-    private fun waitForPackage(packageName: String) {
-        device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val intent = context.packageManager.getLaunchIntentForPackage(packageName)
-        context.startActivity(intent)
-        val launcherPackage = device.launcherPackageName
-        device.wait(Until.hasObject(By.pkg(launcherPackage)), TIMEOUT)
-    }
+    val cm = ClassMain()
+    val buttonLogin = "enter_button"
+    val textAuthorization = "Authorization"
 
     @Before
     fun beforeEachTest() {
+        cm.intistal()
+        cm.wait15s("Authorization")
+        if (cm.textBool("Authorization") == false) {
+            exitLogin()
+        }
     }
+
 
     @Test
     fun testLoginTruePasswordFalse() {
-
-        waitForPackage(packageName)
-        device.findObject(By.text("Login")).setText("login2")
-        device.findObject(By.text("Password")).setText("password1")
-        device.findObject(By.res(packageName, "enter_button")).click()
-        val UiObject = device.findObject(By.text("Authorization")).text
-        val result = UiObject
-        status = 0;
-        assertEquals(result, "Authorization")
+        cm.getText("Login").setText("login2")
+        cm.getText("Password").setText("password1")
+        cm.getElement(buttonLogin).click()
+        assertEquals(cm.getText(textAuthorization).text, textAuthorization)
     }
 
     @Test
     fun testLoginTruePasswordTrue() {
-        val packageName = MODEL_PACKAGE
-        waitForPackage(packageName)
-        device.findObject(By.text("Login")).setText("login2")
-        device.findObject(By.text("Password")).setText("password2")
-        device.findObject(By.res(packageName, "enter_button")).click()
-        Thread.sleep(4000)
-        val UiObject = device.findObject(By.text("News")).text
-        val result = UiObject
-        status = 1
-        assertEquals(result, "News")
-
+        cm.getText("Login").setText("login2")
+        cm.getText("Password").setText("password2")
+        cm.getElement(buttonLogin).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
     }
 
     @Test
     fun testLoginFalsePasswordTrue() {
-        waitForPackage(packageName)
-        device.findObject(By.text("Login")).setText("login1")
-        device.findObject(By.text("Password")).setText("password2")
-        device.findObject(By.res(packageName, "enter_button")).click()
-        val UiObject = device.findObject(By.text("Authorization")).text
-        val result = UiObject
-        status = 0
-        assertEquals(result, "Authorization")
+        cm.getText("Login").setText("login1")
+        cm.getText("Password").setText("password2")
+        cm.getElement(buttonLogin).click()
+        assertEquals(cm.getText(textAuthorization).text, textAuthorization)
     }
 
     @Test
     fun testLoginFalsePasswordFalse() {
-        waitForPackage(packageName)
-        device.findObject(By.text("Login")).setText("login1")
-        device.findObject(By.text("Password")).setText("password1")
-        device.findObject(By.res(packageName, "enter_button")).click()
-        val UiObject = device.findObject(By.text("Authorization")).text
-        val result = UiObject
-        status = 0
-        assertEquals(result, "Authorization")
+        cm.getText("Login").setText("login1")
+        cm.getText("Password").setText("password1")
+        cm.getElement(buttonLogin).click()
+        assertEquals(cm.getText(textAuthorization).text, textAuthorization)
     }
 
     @After
     fun runAfterEveryTest() {
-        if (status == 1) {
-            Thread.sleep(4000)
-            device.findObject(By.res(packageName, "authorization_image_button")).click();
-            Thread.sleep(1000)
-            device.findObject(By.res("android:id/title")).click()
+        exitLogin()
+    }
+
+    fun exitLogin() {
+        if (cm.textBool("News") == true) {
+            cm.getElement("authorization_image_button").click();
+            cm.waitElementAndroid("title")
+            cm.getElementAndroid("title").click()
         }
     }
 }

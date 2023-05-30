@@ -1,65 +1,52 @@
 package ru.iteco.fmhandroid;
+//ok
 
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
+
 import androidx.test.uiautomator.*
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import  ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
 class AboutPagesTest {
 
-    val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-    var status = 0;
-    val TIMEOUT = 15000L
-    val packageName = MODEL_PACKAGE
-    private lateinit var device: UiDevice
-
-    private fun waitForPackage(packageName: String) {
-        device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val intent = context.packageManager.getLaunchIntentForPackage(packageName)
-        context.startActivity(intent)
-        val launcherPackage = device.launcherPackageName
-        device.wait(Until.hasObject(By.pkg(launcherPackage)), TIMEOUT)
-    }
+    val cm = ClassMain()
+    val buttonMenu = "main_menu_image_button"
+    val url1 = "https://vhospice.org/#/privacy-policy/"
+    val url2 = "https://vhospice.org/#/terms-of-use"
+    val url_field = "url_field"
 
     @Before
-    fun PagesAbout() {
-        waitForPackage(packageName)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/main_menu_image_button")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("About")).click()
-        Thread.sleep(2000)
+    fun pagesAbout() {
+
+        cm.ClassMain()
+        cm.getElement(buttonMenu).click();
+        cm.waitText("About")
+        cm.getText("About").click()
+        cm.waitText(url1)
+
     }
 
     @Test
-    fun PrivacyPoliceTest() {
-        device.findObject(By.text("https://vhospice.org/#/privacy-policy/")).click()
-        Thread.sleep(2000)
-        assertEquals(
-            device.findObject(By.res("org.chromium.webview_shell:id/url_field")).text,
-            "https://vhospice.org/#/privacy-policy/"
-        )
+    fun privacyPoliceTest() {
+        cm.getText(url1).click()
+        cm.waitElementChrome(url_field)
+        assertEquals(cm.getElementChrome(url_field).text, url1)
     }
 
     @Test
-    fun TemsOfUseTest() {
-        device.findObject(By.text("https://vhospice.org/#/terms-of-use")).click()
-        Thread.sleep(2000)
-        assertEquals(
-            device.findObject(By.res("org.chromium.webview_shell:id/url_field")).text,
-            "https://vhospice.org/#/terms-of-use"
-        )
+    fun temsOfUseTest() {
+        cm.getText(url2).click()
+        cm.waitElementChrome(url_field)
+        assertEquals(cm.getElementChrome(url_field).text, url2)
     }
 
     @After
     fun EndTest() {
-        device.pressBack()
+        cm.back()
     }
 }

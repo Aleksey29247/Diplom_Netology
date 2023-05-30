@@ -1,349 +1,322 @@
 package ru.iteco.fmhandroid;
 
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
+
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
+
 import androidx.test.uiautomator.*
-import org.junit.After
+
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-
+import ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
 class NewsFilterTest {
-    val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-    var status = 0;
-    val TIMEOUT = 15000L
-    val packageName = MODEL_PACKAGE
-    private lateinit var device: UiDevice
-
-    private fun waitForPackage(packageName: String) {
-        device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val intent = context.packageManager.getLaunchIntentForPackage(packageName)
-        context.startActivity(intent)
-        val launcherPackage = device.launcherPackageName
-        device.wait(Until.hasObject(By.pkg(launcherPackage)), TIMEOUT)
-    }
+    val cm = ClassMain()
+    val buttonMenu = "main_menu_image_button"
+    val buttonFilter = "filter_news_material_button"
+    val buttonSetFilter = "filter_button"
+    val editBeginDataNews = "news_item_publish_date_start_text_input_edit_text"
+    val editEndDataNews = "news_item_publish_date_end_text_input_edit_text"
+    val listText = "text_input_end_icon"
 
     @Before
     fun NewsFilterPages() {
-        waitForPackage(packageName)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/main_menu_image_button")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("News")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_news_material_button")).click();
-        Thread.sleep(2000)
+        cm.ClassMain()
+        cm.getElement(buttonMenu).click()
+        cm.waitText("News")
+        cm.getText("News").click()
+        cm.waitElement(buttonFilter)
+        cm.getElement(buttonFilter).click()
     }
 
     @Test
-    fun EditerCatigoryTest() {
-        device.findObject(By.text("Category")).setText("wer")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("News")).text, "News")
+    fun editerCatigoryTest() {
+        cm.getText("Category").setText("wer")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
     }
 
     @Test
-    fun EditerCatigoryDate1Test() {
-        device.findObject(By.text("Category")).setText("wer")
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryDate1Test() {
+        cm.getText("Category").setText("wer")
+        cm.getElement(editBeginDataNews).setText("21.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
     }
 
     @Test
-    fun EditerCatigoryDate2Test() {
-        device.findObject(By.text("Category")).setText("wer")
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("News")).text, "News")
+    fun editerCatigoryDate2Test() {
+        cm.getText("Category").setText("wer")
+        cm.getElement(editBeginDataNews).setText("21.04.2023")
+        cm.getElement(editEndDataNews).text = "22.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
     }
 
     @Test
-    fun EditerCatigoryNameTest() {
-        device.findObject(By.text("Category")).setText("Объявление")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("TestTitle221210")).text, "TestTitle221210")
+    fun editerCatigoryNameTest() {
+        cm.getText("Category").setText("Объявление")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
     }
 
     @Test
-    fun EditerCatigoryAdvertisementDate1Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Объявление")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryAdvertisementDate1Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Объявление")
+        cm.getText("Объявление").click()
+        cm.getElement(editBeginDataNews).setText("23.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
     }
 
     @Test
-    fun EditerCatigoryAdvertisementDate2Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Объявление")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("TestTitle221210")).text, "TestTitle221210")
+    fun editerCatigoryAdvertisementDate2Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Объявление")
+        cm.getText("Объявление").click()
+        cm.getElement(editBeginDataNews).setText("21.04.2023")
+        cm.getElement(editEndDataNews).text = "22.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("TestTitle221210")
+        assertEquals(cm.getText("TestTitle221210").text, "TestTitle221210")
+
     }
 
     @Test
-    fun EditerCatigoryBirthdaysWithoutaTest() {
-        // device.findObject(By.text("Category"))
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("День рождения")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("День рождения")).text, "День рождения")
+    fun editerCatigoryBirthdaysWithoutaTest() {
+        cm.getElement(listText).click()
+        cm.waitText("Объявление")
+        cm.getText("День рождения").click()
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Changed_news")
+        assertEquals(cm.getText("Changed_news").text, "Changed_news")
+
     }
 
     @Test
-    fun EditerCatigorySalaryTest() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Зарплата")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Зарплата")).text, "Зарплата")
+    fun editerCatigorySalaryTest() {
+        cm.getElement(listText).click()
+        cm.waitText("Объявление")
+        cm.getText("Зарплата").click()
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
+
     }
 
     @Test
-    fun EditerCatigoryBirthdaysWithoutaDate1Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("День рождения")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryBirthdaysWithoutaDate1Test() {
+        cm.getElement(listText).click()
+        cm.waitText("День рождения")
+        cm.getText("День рождения").click()
+        cm.getElement(editBeginDataNews).setText("23.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+
     }
 
     @Test
-    fun EditerCatigoryBirthdaysWithoutaDate2Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("День рождения")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("REFRESH")).text, "REFRESH")
+    fun editerCatigoryBirthdaysWithoutaDate2Test() {
+        cm.getElement(listText).click()
+        cm.waitText("День рождения")
+        cm.getText("День рождения").click()
+        cm.getElement(editBeginDataNews).setText("22.04.2023")
+        cm.getElement(editEndDataNews).text = "23.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("REFRESH")
+        assertEquals(cm.getText("REFRESH").text, "REFRESH")
+
     }
 
     @Test
-    fun EditerCategoryTradeUnionTest() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Профсоюз")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Профсоюз")).text, "Профсоюз")
+    fun editerCategoryTradeUnionTest() {
+        cm.getElement(listText).click()
+        cm.waitText("Профсоюз")
+        cm.getText("Профсоюз").click()
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
+
+
     }
 
     @Test
-    fun EditerCatigoryTradeUnionDate1Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Профсоюз")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryTradeUnionDate1Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Профсоюз")
+        cm.getText("Профсоюз").click()
+        cm.getElement(editBeginDataNews).setText("23.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+
     }
 
     @Test
-    fun EditerCatigoryTradeUnionDate2Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Профсоюз")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("REFRESH")).text, "REFRESH")
+    fun editerCatigoryTradeUnionDate2Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Профсоюз")
+        cm.getText("Профсоюз").click()
+        cm.getElement(editBeginDataNews).setText("22.04.2023")
+        cm.getElement(editEndDataNews).text = "21.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("REFRESH")
+        assertEquals(cm.getText("REFRESH").text, "REFRESH")
+
     }
 
     @Test
-    fun EditerCategoryHolidayTest() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Праздник")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Праздник")).text, "Праздник")
+    fun editerCategoryHolidayTest() {
+        cm.getElement(listText).click()
+        cm.waitText("Праздник")
+        cm.getText("Праздник").click()
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
+
     }
 
     @Test
-    fun EditerCatigoryHolidayDate1Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Праздник")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryHolidayDate1Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Праздник")
+        cm.getText("Праздник").click()
+        cm.getElement(editBeginDataNews).setText("23.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+
     }
 
     @Test
-    fun EditerCatigoryHolidayDate2Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Праздник")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("REFRESH")).text, "REFRESH")
+    fun editerCatigoryHolidayDate2Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Праздник")
+        cm.getText("Праздник").click()
+        cm.getElement(editBeginDataNews).setText("22.04.2023")
+        cm.getElement(editEndDataNews).text = "21.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("REFRESH")
+        assertEquals(cm.getText("REFRESH").text, "REFRESH")
+
     }
 
     @Test
-    fun EditerCategoryMassageTest() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Массаж")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Массаж")).text, "Массаж")
+    fun editerCategoryMassageTest() {
+        cm.getElement(listText).click()
+        cm.waitText("Массаж")
+        cm.getText("Массаж").click()
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
+
     }
 
     @Test
-    fun EditerCatigoryMassageDate1Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Массаж")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryMassageDate1Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Массаж")
+        cm.getText("Массаж").click()
+        cm.getElement(editBeginDataNews).setText("23.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+
     }
 
     @Test
-    fun EditerCatigoryMassageDate2Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Массаж")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("REFRESH")).text, "REFRESH")
+    fun editerCatigoryMassageDate2Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Массаж")
+        cm.getText("Массаж").click()
+        cm.getElement(editBeginDataNews).setText("22.04.2023")
+        cm.getElement(editEndDataNews).text = "21.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("REFRESH")
+        assertEquals(cm.getText("REFRESH").text, "REFRESH")
+
+
     }
 
     @Test
-    fun EditerCategoryGratitudeTest() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Благодарность")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Благодарность")).text, "Благодарность")
+    fun editerCategoryGratitudeTest() {
+        cm.getElement(listText).click()
+        cm.waitText("Благодарность")
+        cm.getText("Благодарность").click()
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
+
     }
 
     @Test
-    fun EditerCatigoryGratitudeDate1Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Благодарность")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryGratitudeDate1Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Благодарность")
+        cm.getText("Благодарность").click()
+        cm.getElement(editBeginDataNews).setText("23.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+
     }
 
     @Test
-    fun EditerCatigoryGratitudeDate2Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Благодарность")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("REFRESH")).text, "REFRESH")
+    fun editerCatigoryGratitudeDate2Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Благодарность")
+        cm.getText("Благодарность").click()
+        cm.getElement(editBeginDataNews).setText("22.04.2023")
+        cm.getElement(editEndDataNews).text = "21.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("REFRESH")
+        assertEquals(cm.getText("REFRESH").text, "REFRESH")
+
     }
 
     @Test
-    fun EditerCategoryNeedHelpTest() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Нужна помощь")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Нужна помощь")).text, "Нужна помощь")
+    fun editerCategoryNeedHelpTest() {
+        cm.getElement(listText).click()
+        cm.waitText("Нужна помощь")
+        cm.getText("Нужна помощь").click()
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("News")
+        assertEquals(cm.getText("News").text, "News")
+
     }
 
     @Test
-    fun EditerCatigoryNeedHelpDate1Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Нужна помощь")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        date1.setText("23.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun editerCatigoryNeedHelpDate1Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Нужна помощь")
+        cm.getText("Нужна помощь").click()
+        cm.getElement(editBeginDataNews).setText("23.04.2023")
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+
     }
 
     @Test
-    fun EditerCatigoryNeedHelpDate2Test() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/text_input_end_icon")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Нужна помощь")).click()
-        var date1 =
-            device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"));
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text")).text =
-            "22.04.2023";
-        date1.setText("21.04.2023")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click();
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("REFRESH")).text, "REFRESH")
+    fun editerCatigoryNeedHelpDate2Test() {
+        cm.getElement(listText).click()
+        cm.waitText("Нужна помощь")
+        cm.getText("Нужна помощь").click()
+        cm.getElement(editBeginDataNews).setText("22.04.2023")
+        cm.getElement(editEndDataNews).text = "21.04.2023";
+        cm.getElement(buttonSetFilter).click()
+        cm.waitText("REFRESH")
+        assertEquals(cm.getText("REFRESH").text, "REFRESH")
+
     }
+
 }

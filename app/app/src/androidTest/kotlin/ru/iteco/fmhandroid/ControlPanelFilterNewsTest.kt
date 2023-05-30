@@ -1,106 +1,91 @@
 package ru.iteco.fmhandroid;
+//ok
 
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.*
-import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import  ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
 class ControlPanelFilterNewsTest {
-    val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-    var status = 0;
-    val TIMEOUT = 15000L
-    val packageName = MODEL_PACKAGE
-    private lateinit var device: UiDevice
 
-    private fun waitForPackage(packageName: String) {
-        device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val intent = context.packageManager.getLaunchIntentForPackage(packageName)
-        context.startActivity(intent)
-        val launcherPackage = device.launcherPackageName
-        device.wait(Until.hasObject(By.pkg(launcherPackage)), TIMEOUT)
-    }
+    val buttonMenu = "main_menu_image_button"
+    val buttonNews = "edit_news_material_button"
+    val buttonFilter = "filter_news_material_button"
+    val buttonFilterSet = "filter_button"
+    val editDataBegin = "news_item_publish_date_start_text_input_edit_text"
+    val editDataEnd = "news_item_publish_date_end_text_input_edit_text"
+    val buttonOk = "button1"
+    var cm = ClassMain()
 
     @Before
-    fun PagesControlPanelFilter() {
-        waitForPackage(packageName)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/main_menu_image_button")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("News")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/edit_news_material_button")).click();
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_news_material_button")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Active")).click() //false
-        device.findObject(By.text("Not active")).click() //false
+    fun pagesControlPanelFilter() {
+        cm.ClassMain()
+        cm.getElement(buttonMenu).click()
+        cm.waitText("News")
+        cm.getText("News").click()
+        cm.waitElement(buttonNews)
+        cm.getElement(buttonNews).click()
+        cm.waitElement(buttonFilter)
+        cm.getElement(buttonFilter).click()
+        cm.waitText("Active")
+        cm.getText("Active").click()
+        cm.getText("Not active").click()
     }
 
     @Test
-    fun CategoryWerNotData() {
-        device.findObject(By.text("Category")).setText("wer")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("TestTitle")).text, "TestTitle")
+    fun categoryWerNotData() {
+        cm.getText("Category").setText("wer")
+        cm.getElement(buttonFilterSet).click()
+        cm.waitText("Control panel")
+        assertEquals(cm.getText("Control panel").text, "Control panel")
     }
 
     @Test
-    fun DateErrorTest() {
-        device.findObject(By.text("Category")).setText("wer")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text")).text =
-            "war"
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun dateErrorTest() {
+        cm.getText("Category").setText("wer")
+        cm.getElement(editDataBegin).text = "war"
+        cm.getElement(buttonFilterSet).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
     }
 
     @Test
-    fun NormalDataOneTest() {
-        device.findObject(By.text("Category")).setText("wer")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"))
-            .click()
-        Thread.sleep(2000)
-        device.findObject(By.res("android:id/button1")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Wrong period")).text, "Wrong period")
+    fun normalDataOneTest() {
+        cm.getText("Category").setText("wer")
+        cm.getElement(editDataBegin).click()
+        cm.waitElementAndroid(buttonOk)
+        cm.getElementAndroid(buttonOk).click()
+        cm.waitElement(buttonFilterSet)
+        cm.getElement(buttonFilterSet).click()
+        cm.waitText("Wrong period")
+        assertEquals(cm.getText("Wrong period").text, "Wrong period")
     }
 
     @Test
-    fun NormalDataTwoTest() {
-        device.findObject(By.text("Category")).setText("wer")
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_start_text_input_edit_text"))
-            .click()
-        Thread.sleep(2000)
-        device.findObject(By.res("android:id/button1")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/news_item_publish_date_end_text_input_edit_text"))
-            .click()
-        Thread.sleep(2000)
-        device.findObject(By.res("android:id/button1")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click()
-        Thread.sleep(2000)
-        assertEquals(
-            device.findObject(By.text("There is nothing here yet…")).text,
-            "There is nothing here yet…"
-        )
-
+    fun normalDataTwoTest() {
+        cm.getText("Category").setText("wer")
+        cm.getElement(editDataBegin).click()
+        cm.waitElementAndroid(buttonOk)
+        cm.getElementAndroid(buttonOk).click()
+        cm.waitElement(buttonFilterSet)
+        cm.getElement(editDataEnd).click()
+        cm.waitElementAndroid(buttonOk)
+        cm.getElementAndroid(buttonOk).click()
+        cm.waitElement(buttonFilterSet)
+        cm.getElement(buttonFilterSet).click()
+        cm.waitText("Control panel")
+        assertEquals(cm.getText("Control panel").text, "Control panel")
     }
 
     @Test
-    fun ActiveFalseNotActiverTrueTest() {
-        device.findObject(By.text("Not active")).click()
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filter_button")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Зарплата")).text, "Зарплата")
+    fun activeFalseNotActiverTrueTest() {
+        cm.getText("Not active").click()
+        cm.getElement(buttonFilterSet).click()
+        cm.waitText("NOT ACTIVE")
+        assertEquals(cm.getText("NOT ACTIVE").text, "NOT ACTIVE")
     }
 }

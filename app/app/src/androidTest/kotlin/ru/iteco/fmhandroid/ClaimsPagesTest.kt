@@ -10,242 +10,224 @@ import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import ru.iteco.fmhandroid.ClassMain
+import java.util.TimeZone
 
 
 @RunWith(AndroidJUnit4::class)
 class ClaimsPagesTest {
-    val MODEL_PACKAGE = "ru.iteco.fmhandroid"
-    var status = 0;
-    val TIMEOUT = 15000L
-    val packageName = MODEL_PACKAGE
-    private lateinit var device: UiDevice
 
-    private fun waitForPackage(packageName: String) {
-        device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val intent = context.packageManager.getLaunchIntentForPackage(packageName)
-        context.startActivity(intent)
-        val launcherPackage = device.launcherPackageName
-        device.wait(Until.hasObject(By.pkg(launcherPackage)), TIMEOUT)
-    }
+    var cm = ClassMain()
+    var buttonOk = "claim_list_filter_ok_material_button"
+    var tableClick = "claim_bottom_divider_image_view"
 
     @Before
-    fun PagesAbout() {
-        waitForPackage(packageName)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/main_menu_image_button")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Claims")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/filters_material_button")).click();
-        Thread.sleep(2000)
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("In progress")).click()
+    fun pagesAbout() {
+        cm.ClassMain()
+        cm.getElement("main_menu_image_button").click()
+        cm.waitText("Claims")
+        cm.getText("Claims").click()
+        cm.waitText("Claims")
+        cm.getElement("filters_material_button").click()
+        cm.waitText("Open")
+        cm.getText("Open").click()
+        cm.getText("In progress").click()
     }
 
     @Test
-    fun FiltersMaterialButtonOpenTest() {
-        device.findObject(By.text("Open")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Open")).text, "Open")
+    fun filtersMaterialButtonOpenTest() {
+        cm.getText("Open").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement("claim_bottom_divider_image_view")
+        cm.getElement("claim_bottom_divider_image_view").click()
+        cm.waitText("Open")
+        assertEquals(cm.getText("Open").text, "Open")
+    }
+
+    /*FIXME*/
+    @Test
+    fun filtersMaterialButtonAllTest() {
+        cm.getText("Open").click()
+        cm.getText("In progress").click()
+        cm.getText("Executed").click()
+        cm.getText("Cancelled").click()
+        cm.getElement("claim_list_filter_ok_material_button").click()
+        cm.waitUpdate(100)
+        cm.getElement("claim_bottom_divider_image_view").click()
+        cm.waitText("Title")
+        cm.getText("Title")
+        cm.back();
+        cm.waitText("Claims")
+        cm.getElement("claim_bottom_divider_image_view").click()
+        cm.waitText("Canceled")
+        assertEquals(cm.getText("Canceled").text, "Canceled")
+    }
+
+
+    //FIXME
+
+    @Test
+    fun filtersMaterialButtontInProgressExecutedCancelledTest() {
+        cm.getText("In progress").click()
+        cm.getText("Executed").click()
+        cm.getText("Cancelled").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("In progress")
+        assertEquals(cm.getText("In progress").text, "In progress")
+    }
+
+    ///FIXME
+    @Test
+    fun filtersMaterialButtontOpenExecutedCancelledTest() {
+        cm.getText("Open").click()
+        cm.getText("Executed").click()
+        cm.getText("Cancelled").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Title")
+        cm.getText("Title")
+        cm.back();
+        cm.waitText("Claims")
+        cm.getElement(tableClick).click()
+        cm.waitText("Canceled")
+        assertEquals(cm.getText("Canceled").text, "Canceled")
     }
 
     @Test
-    fun FiltersMaterialButtonAllTest() {
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("In progress")).click()
-        device.findObject(By.text("Executed")).click()
-        device.findObject(By.text("Cancelled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Canceled")).text, "Canceled")
+    fun filtersMaterialButtontOpenInProgressCancelled() {
+
+        cm.getText("Open").click()
+        cm.getText("In progress").click()
+        cm.getText("Cancelled").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Canceled")
+        assertEquals(cm.getText("Canceled").text, "Canceled")
     }
 
     @Test
-    fun FiltersMaterialButtontInProgressExecutedCancelledTest() {
-        device.findObject(By.text("In progress")).click()
-        device.findObject(By.text("Executed")).click()
-        device.findObject(By.text("Cancelled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("In progress")).text, "In progress")
+    fun filtersMaterialButtontOpenInProgressExecutedTest() {
+        cm.getText("Open").click()
+        cm.getText("In progress").click()
+        cm.getText("Executed").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Executed")
+        assertEquals(cm.getText("Executed").text, "Executed")
     }
 
     @Test
-    fun FiltersMaterialButtontOpenExecutedCancelledTest() {
-
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("Executed")).click()
-        device.findObject(By.text("Cancelled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Canceled")).text, "Canceled")
+    fun filtersMaterialButtontExecutedCanceledTest() {
+        cm.getText("Cancelled").click()
+        cm.getText("Executed").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Title")
+        cm.getText("Title")
+        cm.back();
+        cm.waitText("Claims")
+        cm.getElement(tableClick).click()
+        cm.waitText("Canceled")
+        assertEquals(cm.getText("Canceled").text, "Canceled")
     }
 
     @Test
-    fun FiltersMaterialButtontOpenInProgressCancelled() {
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("In progress")).click()
-        device.findObject(By.text("Cancelled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Canceled")).text, "Canceled")
+    fun filtersMaterialButtontOpenInProgressTest() {
+        cm.getText("Open").click()
+        cm.getText("In progress").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("In progress")
+        assertEquals(cm.getText("In progress").text, "In progress")
+    }
+
+    // FIXME:
+    @Test
+    fun filtersMaterialButtontOpenExecutedTest() {
+        cm.getText("Open").click()
+        cm.getText("Executed").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Executed")
+        assertEquals(cm.getText("Executed").text, "Executed")
     }
 
     @Test
-    fun FiltersMaterialButtontOpenInProgressExecutedTest() {
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("In progress")).click()
-        device.findObject(By.text("Executed")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("In progress")).text, "In progress")
+    fun filtersMaterialButtontOpenCanceledTest() {
+        cm.getText("Open").click()
+        cm.getText("Cancelled").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Canceled")
+        assertEquals(cm.getText("Canceled").text, "Canceled")
     }
 
     @Test
-    fun FiltersMaterialButtontExecutedCanceledTest() {
-        device.findObject(By.text("Canceled")).click()
-        device.findObject(By.text("Executed")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Executed")).text, "Executed")
+    fun filtersMaterialButtontInProgressExecutedTest() {
+        cm.getText("In progress").click()
+        cm.getText("Executed").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Executed")
+        assertEquals(cm.getText("Executed").text, "Executed")
     }
 
     @Test
-    fun FiltersMaterialButtontOpenInProgressTest() {
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("In Progress")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("In Progress")).text, "In Progress")
+    fun filtersMaterialButtontInProgressCanceledTest() {
+        cm.getText("In progress").click()
+        cm.getText("Cancelled").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("In progress")
+        assertEquals(cm.getText("In progress").text, "In progress")
     }
 
     @Test
-    fun FiltersMaterialButtontOpenExecutedTest() {
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("Executed")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Executed")).text, "Executed")
+    fun filtersMaterialButtontCanceledTest() {
+        cm.getText("Cancelled").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Canceled")
+        assertEquals(cm.getText("Canceled").text, "Canceled")
     }
 
     @Test
-    fun FiltersMaterialButtontOpenCanceledTest() {
-        device.findObject(By.text("Open")).click()
-        device.findObject(By.text("Canceled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Open")).text, "Open")
+    fun filtersMaterialButtontInProgressTest() {
+        cm.getText("In progress").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("In progress")
+        assertEquals(cm.getText("In progress").text, "In progress")
     }
 
     @Test
-    fun FiltersMaterialButtontInProgressExecutedTest() {
-        device.findObject(By.text("In Progress")).click()
-        device.findObject(By.text("Executed")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Executed")).text, "Executed")
+    fun filtersMaterialButtontExecutedTest() {
+        cm.getText("Executed").click()
+        cm.getElement(buttonOk).click()
+        cm.waitElement(tableClick)
+        cm.getElement(tableClick).click()
+        cm.waitText("Executed")
+        assertEquals(cm.getText("Executed").text, "Executed")
     }
 
     @Test
-    fun FiltersMaterialButtontInProgressCanceledTest() {
-        device.findObject(By.text("In Progress")).click()
-        device.findObject(By.text("Canceled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("In Progress")).text, "In Progress")
-    }
-
-    @Test
-    fun FiltersMaterialButtontCanceledTest() {
-        device.findObject(By.text("Canceled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Canceled")).text, "Canceled")
-    }
-
-    @Test
-    fun FiltersMaterialButtontInProgressTest() {
-        device.findObject(By.text("Canceled")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("In Progress")).text, "In Progress")
-    }
-
-    @Test
-    fun FiltersMaterialButtontExecutedTest() {
-        device.findObject(By.text("Executed")).click()
-        Thread.sleep(2000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(10000)
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_bottom_divider_image_view")).click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("Executed")).text, "Executed")
-    }
-
-    @Test
-    fun FiltersMaterialButtontNullTest() {
-        device.findObject(By.res("ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button"))
-            .click()
-        Thread.sleep(2000)
-        assertEquals(device.findObject(By.text("REFRESH")).text, "REFRESH")
+    fun filtersMaterialButtontNullTest() {
+        cm.getElement(buttonOk).click()
+        cm.waitText("REFRESH")
+        assertEquals(cm.getText("REFRESH").text, "REFRESH")
     }
 }
 
