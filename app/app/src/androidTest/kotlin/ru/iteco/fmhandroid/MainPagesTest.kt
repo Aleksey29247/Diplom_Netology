@@ -10,35 +10,34 @@ import org.junit.runner.RunWith
 import ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
-class MainPagesTest {
-    val cm = ClassMain()
+class MainPagesTest : ClassMain(){
     val buttonMenu = "expand_material_button"
     val buttonAllNews = "all_news_text_view"
 
     @Before
     fun pageMain() {
-        cm.ClassMain()
+        ClassMain()
     }
 
     @Test
     fun stringNewsTest() {
-        cm.getText("News").click()
+        getText("News").click()
 
     }
 
     @Test
     fun expandMaterialButtonUpDownTest() {
-        cm.getElement(buttonMenu).click()
-        cm.waitElement(buttonMenu)
-        cm.getElement(buttonMenu).click()
-        cm.waitText("ALL NEWS")
-        assertEquals(cm.getText("ALL NEWS").text, "ALL NEWS")
+        getElement(buttonMenu).click()
+        waitElement(buttonMenu)
+        getElement(buttonMenu).click()
+        waitText("ALL NEWS")
+        assertEquals(getText("ALL NEWS").text, "ALL NEWS")
     }
 
     @Test
     fun allNewsTextViewTest() {
-        cm.getElement(buttonAllNews).click()
-        cm.waitText("News")
-        assertEquals(cm.getText("News").text, "News")
+        getElement(buttonAllNews).click()
+        waitText("News")
+        assertEquals(getText("News").text, "News")
     }
 }

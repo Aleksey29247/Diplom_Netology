@@ -10,16 +10,15 @@ import org.junit.After
 import ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
-class LoginTest {
-    val cm = ClassMain()
+class LoginTest : ClassMain(){
     val buttonLogin = "enter_button"
     val textAuthorization = "Authorization"
 
     @Before
     fun beforeEachTest() {
-        cm.intistal()
-        cm.wait15s("Authorization")
-        if (cm.textBool("Authorization") == false) {
+        intistal()
+        wait15s("Authorization")
+        if (textBool("Authorization") == false) {
             exitLogin()
         }
     }
@@ -27,35 +26,35 @@ class LoginTest {
 
     @Test
     fun testLoginTruePasswordFalse() {
-        cm.getText("Login").setText("login2")
-        cm.getText("Password").setText("password1")
-        cm.getElement(buttonLogin).click()
-        assertEquals(cm.getText(textAuthorization).text, textAuthorization)
+        getText("Login").setText("login2")
+        getText("Password").setText("password1")
+        getElement(buttonLogin).click()
+        assertEquals(getText(textAuthorization).text, textAuthorization)
     }
 
     @Test
     fun testLoginTruePasswordTrue() {
-        cm.getText("Login").setText("login2")
-        cm.getText("Password").setText("password2")
-        cm.getElement(buttonLogin).click()
-        cm.waitText("News")
-        assertEquals(cm.getText("News").text, "News")
+        getText("Login").setText("login2")
+        getText("Password").setText("password2")
+        getElement(buttonLogin).click()
+        waitText("News")
+        assertEquals(getText("News").text, "News")
     }
 
     @Test
     fun testLoginFalsePasswordTrue() {
-        cm.getText("Login").setText("login1")
-        cm.getText("Password").setText("password2")
-        cm.getElement(buttonLogin).click()
-        assertEquals(cm.getText(textAuthorization).text, textAuthorization)
+        getText("Login").setText("login1")
+        getText("Password").setText("password2")
+        getElement(buttonLogin).click()
+        assertEquals(getText(textAuthorization).text, textAuthorization)
     }
 
     @Test
     fun testLoginFalsePasswordFalse() {
-        cm.getText("Login").setText("login1")
-        cm.getText("Password").setText("password1")
-        cm.getElement(buttonLogin).click()
-        assertEquals(cm.getText(textAuthorization).text, textAuthorization)
+        getText("Login").setText("login1")
+        getText("Password").setText("password1")
+        getElement(buttonLogin).click()
+        assertEquals(getText(textAuthorization).text, textAuthorization)
     }
 
     @After
@@ -64,10 +63,10 @@ class LoginTest {
     }
 
     fun exitLogin() {
-        if (cm.textBool("News") == true) {
-            cm.getElement("authorization_image_button").click();
-            cm.waitElementAndroid("title")
-            cm.getElementAndroid("title").click()
+        if (textBool("News") == true) {
+            getElement("authorization_image_button").click();
+            waitElementAndroid("title")
+            getElementAndroid("title").click()
         }
     }
 }

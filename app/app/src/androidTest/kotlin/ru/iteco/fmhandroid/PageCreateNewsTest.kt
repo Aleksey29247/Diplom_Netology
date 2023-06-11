@@ -8,8 +8,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class PageCreateNewsTest {
-    val cm = ClassMain()
+class PageCreateNewsTest : ClassMain(){
     val buttonMenu = "main_menu_image_button"
     val editNews = "edit_news_material_button"
     val buttonAddNews = "add_news_image_view"
@@ -23,63 +22,62 @@ class PageCreateNewsTest {
 
     @Before
     fun PagesNewsCreate() {
-        cm.ClassMain()
-        cm.getElement(buttonMenu).click()
-        cm.waitText("News")
-        cm.getText("News").click()
-        cm.waitElement(editNews)
-        cm.getElement(editNews).click()
-        cm.waitElement(buttonAddNews)
-        cm.getElement(buttonAddNews).click()
+        ClassMain()
+        getElement(buttonMenu).click()
+        waitText("News")
+        getText("News").click()
+        waitElement(editNews)
+        getElement(editNews).click()
+        waitElement(buttonAddNews)
+        getElement(buttonAddNews).click()
     }
-
 
     @Test
     fun SaveTestEmptyTest() {
-        cm.getElement(buttonSave).click()
-        cm.waitText("News")
+        getElement(buttonSave).click()
+        waitText("News")
 
     }
 
     @Test
     fun SaveFullPolesTest() {
-        cm.getElement(listTypeNews).click()
-        cm.waitText("Объявление")
-        cm.getText("Объявление").click()
-        cm.back()
-        cm.waitElement(editPublicDateNews)
-        cm.getElement(editPublicDateNews).click()
-        cm.waitElementAndroid(buttonOk)
-        cm.getElementAndroid(buttonOk).click()
-        cm.waitElement(editPublicTimeNews)
-        cm.getElement(editPublicTimeNews).click()
-        cm.waitElementAndroid(buttonOk)
-        cm.getElementAndroid(buttonOk).click()
-        cm.waitElement(editDescriptText)
-        cm.getElement(editDescriptText).text = "Мы рады"
-        cm.getElement(buttonSave).click()
-        cm.waitText("Объявление")
-        assertEquals(cm.getText("Объявление").getText(), "Объявление")
+        getElement(listTypeNews).click()
+        waitText("Объявление")
+        getText("Объявление").click()
+        back()
+        waitElement(editPublicDateNews)
+        getElement(editPublicDateNews).click()
+        waitElementAndroid(buttonOk)
+        getElementAndroid(buttonOk).click()
+        waitElement(editPublicTimeNews)
+        getElement(editPublicTimeNews).click()
+        waitElementAndroid(buttonOk)
+        getElementAndroid(buttonOk).click()
+        waitElement(editDescriptText)
+        getElement(editDescriptText).text = "Мы рады"
+        getElement(buttonSave).click()
+        waitText("Объявление")
+        assertEquals(getText("Объявление").getText(), "Объявление")
 
     }
 
     @Test
     fun SaveFullPolesCategoryTest() {
-        cm.getElement(listTypeNews).text = "war"
-        cm.getElement(editText).text = "war"
-        cm.waitElement(editPublicDateNews)
-        cm.getElement(editPublicDateNews).click()
-        cm.waitElementAndroid(buttonOk)
-        cm.getElementAndroid(buttonOk).click()
-        cm.waitElement(editPublicTimeNews)
-        cm.getElement(editPublicTimeNews).click()
-        cm.waitElementAndroid(buttonOk)
-        cm.getElementAndroid(buttonOk).click()
-        cm.waitElement(editDescriptText)
-        cm.getElement(editDescriptText).text = "Мы рады"
-        cm.getElement(buttonSave).click()
-        cm.waitText("News")
-        assertEquals(cm.getText("News").text, "News")
+        getElement(listTypeNews).text = "war"
+        getElement(editText).text = "war"
+        waitElement(editPublicDateNews)
+        getElement(editPublicDateNews).click()
+        waitElementAndroid(buttonOk)
+        getElementAndroid(buttonOk).click()
+        waitElement(editPublicTimeNews)
+        getElement(editPublicTimeNews).click()
+        waitElementAndroid(buttonOk)
+        getElementAndroid(buttonOk).click()
+        waitElement(editDescriptText)
+        getElement(editDescriptText).text = "Мы рады"
+        getElement(buttonSave).click()
+        waitText("News")
+        assertEquals(getText("News").text, "News")
     }
 
 

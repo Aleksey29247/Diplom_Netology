@@ -10,8 +10,7 @@ import org.junit.runner.RunWith
 import ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
-class ControlPanelNewsTest {
-    val cm = ClassMain()
+class ControlPanelNewsTest : ClassMain(){
     val buttonMenu = "main_menu_image_button"
     val buttonNews = "edit_news_material_button"
     val buttonSort = "sort_news_material_button"
@@ -20,31 +19,31 @@ class ControlPanelNewsTest {
 
     @Before
     fun pagesControlPanel() {
-        cm.ClassMain()
-        cm.getElement(buttonMenu).click()
-        cm.waitText("News")
-        cm.getText("News").click()
-        cm.waitElement(buttonNews)
-        cm.getElement(buttonNews).click()
-        cm.waitText("ACTIVE")
+        ClassMain()
+        getElement(buttonMenu).click()
+        waitText("News")
+        getText("News").click()
+        waitElement(buttonNews)
+        getElement(buttonNews).click()
+        waitText("ACTIVE")
     }
 
     @Test
     fun sortNewsMaterialButtonZXYTest() {
-        cm.getElement(buttonSort).click()
-        cm.getElement(buttonSort).click()
-        cm.waitText("ACTIVE")
-        assertEquals(cm.getText("ACTIVE").text, "ACTIVE")
+        getElement(buttonSort).click()
+        getElement(buttonSort).click()
+        waitText("ACTIVE")
+        assertEquals(getText("ACTIVE").text, "ACTIVE")
     }
 
     @Test
     fun filterNewsMaterialButtonTest() {
-        cm.getElement(buttonFilter).click()
-        cm.waitText("Active")
-        cm.getText("Active").click()
-        cm.getText("Not active").click()
-        cm.getElement(buttonFilterSet).click()
-        cm.waitText("ACTIVE")
-        assertEquals(cm.getText("ACTIVE").text, "ACTIVE")
+        getElement(buttonFilter).click()
+        waitText("Active")
+        getText("Active").click()
+        getText("Not active").click()
+        getElement(buttonFilterSet).click()
+        waitText("ACTIVE")
+        assertEquals(getText("ACTIVE").text, "ACTIVE")
     }
 }

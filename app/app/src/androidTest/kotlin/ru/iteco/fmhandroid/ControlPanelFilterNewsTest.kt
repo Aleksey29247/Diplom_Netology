@@ -10,7 +10,7 @@ import org.junit.runner.RunWith
 import  ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
-class ControlPanelFilterNewsTest {
+class ControlPanelFilterNewsTest : ClassMain(){
 
     val buttonMenu = "main_menu_image_button"
     val buttonNews = "edit_news_material_button"
@@ -23,69 +23,69 @@ class ControlPanelFilterNewsTest {
 
     @Before
     fun pagesControlPanelFilter() {
-        cm.ClassMain()
-        cm.getElement(buttonMenu).click()
-        cm.waitText("News")
-        cm.getText("News").click()
-        cm.waitElement(buttonNews)
-        cm.getElement(buttonNews).click()
-        cm.waitElement(buttonFilter)
-        cm.getElement(buttonFilter).click()
-        cm.waitText("Active")
-        cm.getText("Active").click()
-        cm.getText("Not active").click()
+        ClassMain()
+        getElement(buttonMenu).click()
+        waitText("News")
+        getText("News").click()
+        waitElement(buttonNews)
+        getElement(buttonNews).click()
+        waitElement(buttonFilter)
+        getElement(buttonFilter).click()
+        waitText("Active")
+        getText("Active").click()
+        getText("Not active").click()
     }
 
     @Test
     fun categoryWerNotData() {
-        cm.getText("Category").setText("wer")
-        cm.getElement(buttonFilterSet).click()
-        cm.waitText("Control panel")
-        assertEquals(cm.getText("Control panel").text, "Control panel")
+        getText("Category").setText("wer")
+        getElement(buttonFilterSet).click()
+        waitText("Control panel")
+        assertEquals(getText("Control panel").text, "Control panel")
     }
 
     @Test
     fun dateErrorTest() {
-        cm.getText("Category").setText("wer")
-        cm.getElement(editDataBegin).text = "war"
-        cm.getElement(buttonFilterSet).click()
-        cm.waitText("Wrong period")
-        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+        getText("Category").setText("wer")
+        getElement(editDataBegin).text = "war"
+        getElement(buttonFilterSet).click()
+        waitText("Wrong period")
+        assertEquals(getText("Wrong period").text, "Wrong period")
     }
 
     @Test
     fun normalDataOneTest() {
-        cm.getText("Category").setText("wer")
-        cm.getElement(editDataBegin).click()
-        cm.waitElementAndroid(buttonOk)
-        cm.getElementAndroid(buttonOk).click()
-        cm.waitElement(buttonFilterSet)
-        cm.getElement(buttonFilterSet).click()
-        cm.waitText("Wrong period")
-        assertEquals(cm.getText("Wrong period").text, "Wrong period")
+        getText("Category").setText("wer")
+        getElement(editDataBegin).click()
+        waitElementAndroid(buttonOk)
+        getElementAndroid(buttonOk).click()
+        waitElement(buttonFilterSet)
+        getElement(buttonFilterSet).click()
+        waitText("Wrong period")
+        assertEquals(getText("Wrong period").text, "Wrong period")
     }
 
     @Test
     fun normalDataTwoTest() {
-        cm.getText("Category").setText("wer")
-        cm.getElement(editDataBegin).click()
-        cm.waitElementAndroid(buttonOk)
-        cm.getElementAndroid(buttonOk).click()
-        cm.waitElement(buttonFilterSet)
-        cm.getElement(editDataEnd).click()
-        cm.waitElementAndroid(buttonOk)
-        cm.getElementAndroid(buttonOk).click()
-        cm.waitElement(buttonFilterSet)
-        cm.getElement(buttonFilterSet).click()
-        cm.waitText("Control panel")
-        assertEquals(cm.getText("Control panel").text, "Control panel")
+        getText("Category").setText("wer")
+        getElement(editDataBegin).click()
+        waitElementAndroid(buttonOk)
+        getElementAndroid(buttonOk).click()
+        waitElement(buttonFilterSet)
+        getElement(editDataEnd).click()
+        waitElementAndroid(buttonOk)
+        getElementAndroid(buttonOk).click()
+        waitElement(buttonFilterSet)
+        getElement(buttonFilterSet).click()
+        waitText("Control panel")
+        assertEquals(getText("Control panel").text, "Control panel")
     }
 
     @Test
     fun activeFalseNotActiverTrueTest() {
-        cm.getText("Not active").click()
-        cm.getElement(buttonFilterSet).click()
-        cm.waitText("NOT ACTIVE")
-        assertEquals(cm.getText("NOT ACTIVE").text, "NOT ACTIVE")
+        getText("Not active").click()
+        getElement(buttonFilterSet).click()
+        waitText("NOT ACTIVE")
+        assertEquals(getText("NOT ACTIVE").text, "NOT ACTIVE")
     }
 }

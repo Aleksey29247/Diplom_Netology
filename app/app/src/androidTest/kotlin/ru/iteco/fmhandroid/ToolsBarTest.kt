@@ -1,7 +1,5 @@
 package ru.iteco.fmhandroid
 
-//ok
-
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.*
 import org.junit.Assert.*
@@ -10,9 +8,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class ToolsBarTest {
+class ToolsBarTest : ClassMain(){
 
-    val cm = ClassMain()
     val buttonAuthorization = "authorization_image_button"
     val buttonMenu = "main_menu_image_button"
     val imageTrademark = "trademark_image_view"
@@ -21,62 +18,62 @@ class ToolsBarTest {
 
     @Before
     fun mainPages() {
-        cm.ClassMain()
+        ClassMain()
     }
 
     @Test
     fun mainMenuButtonTest() {
-        cm.getElement(buttonMenu).click()
-        cm.waitText("Main")
-        assertEquals(cm.getText("Main").text, "Main")
+        getElement(buttonMenu).click()
+        waitText("Main")
+        assertEquals(getText("Main").text, "Main")
     }
 
     @Test
     fun menuClaimsTest() {
-        cm.getElement(buttonMenu).click()
-        cm.waitText("Claims")
-        cm.getText("Claims").click()
-        cm.waitText("Claims")
-        assertEquals(cm.getText("Claims").text, "Claims")
+        getElement(buttonMenu).click()
+        waitText("Claims")
+        getText("Claims").click()
+        waitText("Claims")
+        assertEquals(getText("Claims").text, "Claims")
     }
 
     @Test
     fun menuNewsTest() {
-        cm.getElement(buttonMenu).click()
-        cm.waitText("News")
-        cm.getText("News").click()
-        cm.waitText("News")
-        assertEquals(cm.getText("News").text, "News")
+        getElement(buttonMenu).click()
+        waitText("News")
+        getText("News").click()
+        waitText("News")
+        assertEquals(getText("News").text, "News")
     }
 
     @Test
     fun menuAboutTest() {
-        cm.getElement(buttonMenu).click()
-        cm.waitText("About")
-        cm.getText("About").click()
-        cm.waitText("Version:")
-        assertEquals(cm.getText("Version:").text, "Version:")
+        getElement(buttonMenu).click()
+        waitText("About")
+        getText("About").click()
+        waitText("Version:")
+        assertEquals(getText("Version:").text, "Version:")
     }
 
     @Test
     fun clickImageTest() {
-        cm.getElement(imageTrademark).click()
-        assertEquals(cm.getText("Claims").text, "Claims")
+        getElement(imageTrademark).click()
+        assertEquals(getText("Claims").text, "Claims")
     }
 
     @Test
     fun ourMissionImageButtonTest() {
-        cm.getElement(buttonProfel).click()
-        cm.waitText("Love is all")
-        assertEquals(cm.getText("Love is all").text, "Love is all")
+        getElement(buttonProfel).click()
+        waitText("Love is all")
+        assertEquals(getText("Love is all").text, "Love is all")
     }
 
     @Test
     fun loginOutTest() {
-        cm.getElement(buttonAuthorization).click()
-        cm.waitElementAndroid(buttonExit)
-        cm.getElementAndroid(buttonExit).click()
-        cm.waitText("Authorization")
-        assertEquals(cm.getText("Authorization").text, "Authorization")
+        getElement(buttonAuthorization).click()
+        waitElementAndroid(buttonExit)
+        getElementAndroid(buttonExit).click()
+        waitText("Authorization")
+        assertEquals(getText("Authorization").text, "Authorization")
     }
 }

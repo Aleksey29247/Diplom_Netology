@@ -10,8 +10,7 @@ import java.util.*
 import ru.iteco.fmhandroid.ClassMain
 
 @RunWith(AndroidJUnit4::class)
-class CreatingClaimsTest {
-    val cm = ClassMain()
+class CreatingClaimsTest : ClassMain(){
     val buttonMenu = "main_menu_image_button"
     val buttonAddClaims = "add_new_claim_material_button"
     val editTitle = "title_edit_text"
@@ -25,72 +24,72 @@ class CreatingClaimsTest {
 
     @Before
     fun PagesCreate() {
-        cm.ClassMain()
-        cm.getElement(buttonMenu).click()
-        cm.waitText("Claims")
-        cm.getText("Claims").click()
-        cm.waitElement(buttonAddClaims)
-        cm.getElement(buttonAddClaims).click()
-        cm.waitText("SAVE")
+        ClassMain()
+        getElement(buttonMenu).click()
+        waitText("Claims")
+        getText("Claims").click()
+        waitElement(buttonAddClaims)
+        getElement(buttonAddClaims).click()
+        waitText("SAVE")
     }
 
     @Test
     fun titleEditText50CharTest() {
-        cm.getElement(editTitle).text = "aaaaaaaasaasdaad"
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editTitle).text = "aaaaaaaasaasdaad"
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
     @Test
     fun titleEditTextMore50CharTest() {
-        cm.getElement(editTitle).text = char50
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editTitle).text = char50
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
     @Test
     fun titleEditText50CharRusTest() {
-        cm.getElement(editTitle).text = "ааавы"
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editTitle).text = "ааавы"
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
     @Test
     fun titleEditTextMore50CharRusTest() {
-        cm.getElement(editTitle).text = char50rus
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editTitle).text = char50rus
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
     @Test
     fun textInputPlaceholderTest() {
-        cm.getElement(editException).click()
-        cm.waitText(NameText)
-        cm.getText(NameText).click()
-        cm.waitElement(buttonSave)
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editException).click()
+        waitText(NameText)
+        getText(NameText).click()
+        waitElement(buttonSave)
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
     @Test
     fun dataTest() {
-        cm.getElement(editDataBegin).text = "01.07.1900"
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editDataBegin).text = "01.07.1900"
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
     @Test
     fun timeTest() {
-        cm.getElement(editTimeBegin).text = "20:00"
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editTimeBegin).text = "20:00"
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
     @Test
@@ -104,10 +103,10 @@ class CreatingClaimsTest {
         } else {
             timeText = hours.toString() + ":" + min.toString()
         }
-        cm.getElement(editTimeBegin).text = timeText
-        cm.getElement(buttonSave).click()
-        cm.waitText("Fill empty fields")
-        assertEquals(cm.getText("Fill empty fields").text, "Fill empty fields")
+        getElement(editTimeBegin).text = timeText
+        getElement(buttonSave).click()
+        waitText("Fill empty fields")
+        assertEquals(getText("Fill empty fields").text, "Fill empty fields")
     }
 
 }

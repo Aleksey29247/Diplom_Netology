@@ -7,7 +7,7 @@ import androidx.test.uiautomator.*
 
 
 
-class ClassMain() {
+open class ClassMain() {
     val MODEL_PACKAGE = "ru.iteco.fmhandroid"
     val TIMEOUT = 45000L
     val timeOutIn = 15000L
