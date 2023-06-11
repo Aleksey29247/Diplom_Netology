@@ -8,72 +8,53 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class ToolsBarTest : ClassMain(){
+class ToolsBarTest : PageObjectToolsBar(){
 
-    val buttonAuthorization = "authorization_image_button"
-    val buttonMenu = "main_menu_image_button"
     val imageTrademark = "trademark_image_view"
-    val buttonProfel = "our_mission_image_button"
-    val buttonExit = "title"
-
     @Before
     fun mainPages() {
-        ClassMain()
+      initPage()
     }
 
     @Test
     fun mainMenuButtonTest() {
-        getElement(buttonMenu).click()
-        waitText("Main")
-        assertEquals(getText("Main").text, "Main")
+        buttonMenuClick()
+        assertEquals(result("Main"), true)
     }
 
     @Test
     fun menuClaimsTest() {
-        getElement(buttonMenu).click()
-        waitText("Claims")
-        getText("Claims").click()
-        waitText("Claims")
-        assertEquals(getText("Claims").text, "Claims")
+       buttonClaimsClick()
+        assertEquals(result("Claims"), true)
     }
 
     @Test
     fun menuNewsTest() {
-        getElement(buttonMenu).click()
-        waitText("News")
-        getText("News").click()
-        waitText("News")
-        assertEquals(getText("News").text, "News")
+        buttonNewsclick()
+        assertEquals(result("News"), true)
     }
 
     @Test
     fun menuAboutTest() {
-        getElement(buttonMenu).click()
-        waitText("About")
-        getText("About").click()
-        waitText("Version:")
-        assertEquals(getText("Version:").text, "Version:")
+        buttonAboutClick()
+        assertEquals(result("Version:"), true)
     }
 
     @Test
     fun clickImageTest() {
-        getElement(imageTrademark).click()
-        assertEquals(getText("Claims").text, "Claims")
+        clickImag(imageTrademark)
+        assertEquals(result("Claims"), true)
     }
 
     @Test
     fun ourMissionImageButtonTest() {
-        getElement(buttonProfel).click()
-        waitText("Love is all")
-        assertEquals(getText("Love is all").text, "Love is all")
+       buttonProfel()
+        assertEquals(result("Love is all"), true)
     }
 
     @Test
     fun loginOutTest() {
-        getElement(buttonAuthorization).click()
-        waitElementAndroid(buttonExit)
-        getElementAndroid(buttonExit).click()
-        waitText("Authorization")
-        assertEquals(getText("Authorization").text, "Authorization")
+        buttonLoginOutclick()
+        assertEquals(result("Authorization"), true)
     }
 }

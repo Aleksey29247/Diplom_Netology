@@ -38,10 +38,16 @@ open class ClassMain() {
     }
 
     fun getText(str: String): UiObject2 {
-
         return device.findObject(By.text(str))
     }
 
+    fun returnText(str: String): String {
+
+        if (device.findObject(By.text(str))==null)
+        {return "null"}
+        else {device.findObject(By.text(str)).text}
+        return device.findObject(By.text(str)).text
+    }
     fun getElement(str: String): UiObject2 {
         return device.findObject(By.res(packageName, str))
     }

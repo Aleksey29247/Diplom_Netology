@@ -7,12 +7,10 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.After
-import ru.iteco.fmhandroid.ClassMain
+
 
 @RunWith(AndroidJUnit4::class)
-class LoginTest : ClassMain(){
-    val buttonLogin = "enter_button"
-    val textAuthorization = "Authorization"
+class LoginTest: PageObjectLogin() {
 
     @Before
     fun beforeEachTest() {
@@ -22,39 +20,35 @@ class LoginTest : ClassMain(){
             exitLogin()
         }
     }
-
-
     @Test
     fun testLoginTruePasswordFalse() {
-        getText("Login").setText("login2")
-        getText("Password").setText("password1")
-        getElement(buttonLogin).click()
-        assertEquals(getText(textAuthorization).text, textAuthorization)
+        enterLogin("login2","password1")
+        buttonClick()
+        assertEquals(login(), false)
     }
 
     @Test
     fun testLoginTruePasswordTrue() {
-        getText("Login").setText("login2")
-        getText("Password").setText("password2")
-        getElement(buttonLogin).click()
+        enterLogin("login2","password2")
+        buttonClick()
         waitText("News")
-        assertEquals(getText("News").text, "News")
+        assertEquals(login(), true)
     }
 
     @Test
     fun testLoginFalsePasswordTrue() {
-        getText("Login").setText("login1")
-        getText("Password").setText("password2")
-        getElement(buttonLogin).click()
-        assertEquals(getText(textAuthorization).text, textAuthorization)
+        enterLogin("login1","password2")
+        buttonClick()
+        assertEquals(login(), false)
+
     }
 
     @Test
     fun testLoginFalsePasswordFalse() {
-        getText("Login").setText("login1")
-        getText("Password").setText("password1")
-        getElement(buttonLogin).click()
-        assertEquals(getText(textAuthorization).text, textAuthorization)
+        enterLogin("login1","password1")
+        buttonClick()
+        assertEquals(login(), false)
+
     }
 
     @After
