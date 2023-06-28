@@ -6,7 +6,6 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.*
 
 
-
 open class ClassMain() {
     val MODEL_PACKAGE = "ru.iteco.fmhandroid"
     val TIMEOUT = 45000L
@@ -38,16 +37,20 @@ open class ClassMain() {
     }
 
     fun getText(str: String): UiObject2 {
-        return device.findObject(By.text(str))
+
+        return (device.findObject(By.text(str)))
     }
 
     fun returnText(str: String): String {
 
-        if (device.findObject(By.text(str))==null)
-        {return "null"}
-        else {device.findObject(By.text(str)).text}
+        if (device.findObject(By.text(str)) == null) {
+            return "null"
+        } else {
+            device.findObject(By.text(str)).text
+        }
         return device.findObject(By.text(str)).text
     }
+
     fun getElement(str: String): UiObject2 {
         return device.findObject(By.res(packageName, str))
     }
@@ -67,6 +70,7 @@ open class ClassMain() {
             return true
         }
     }
+
     fun waitElementChrome(str: String): UiObject2 {
         return device.wait(
             Until.findObject(By.res("org.chromium.webview_shell:id/" + str)),
@@ -79,19 +83,19 @@ open class ClassMain() {
     }
 
     fun waitElement(str: String) {
-         device.wait(Until.findObject(By.res(packageName, str)), TIMEOUT)
+        device.wait(Until.findObject(By.res(packageName, str)), TIMEOUT)
     }
 
     fun back() {
         device.pressBack()
     }
 
-    fun waitUpdate(timeSecund: Long): Int {
-        if (timeSecund <= 0) {
+    fun waitUpdate(timeSecond: Long): Int {
+        if (timeSecond <= 0) {
             device.waitForWindowUpdate(null, TIMEOUT)
             return 1;
         } else {
-            device.waitForWindowUpdate(null, timeSecund * 1000)
+            device.waitForWindowUpdate(null, timeSecond * 1000)
             return 0;
         }
     }

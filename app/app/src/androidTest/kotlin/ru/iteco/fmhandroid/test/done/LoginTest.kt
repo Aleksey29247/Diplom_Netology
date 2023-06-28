@@ -10,26 +10,23 @@ import org.junit.After
 
 
 @RunWith(AndroidJUnit4::class)
-class LoginTest: PageObjectLogin() {
+class LoginTest : PageObjectLogin() {
 
     @Before
     fun beforeEachTest() {
-        intistal()
-        wait15s("Authorization")
-        if (textBool("Authorization") == false) {
-            exitLogin()
-        }
+        initstalPage()
     }
+
     @Test
     fun testLoginTruePasswordFalse() {
-        enterLogin("login2","password1")
+        enterLogin("login2", "password1")
         buttonClick()
         assertEquals(login(), false)
     }
 
     @Test
     fun testLoginTruePasswordTrue() {
-        enterLogin("login2","password2")
+        enterLogin("login2", "password2")
         buttonClick()
         waitText("News")
         assertEquals(login(), true)
@@ -37,7 +34,7 @@ class LoginTest: PageObjectLogin() {
 
     @Test
     fun testLoginFalsePasswordTrue() {
-        enterLogin("login1","password2")
+        enterLogin("login1", "password2")
         buttonClick()
         assertEquals(login(), false)
 
@@ -45,7 +42,7 @@ class LoginTest: PageObjectLogin() {
 
     @Test
     fun testLoginFalsePasswordFalse() {
-        enterLogin("login1","password1")
+        enterLogin("login1", "password1")
         buttonClick()
         assertEquals(login(), false)
 
@@ -56,12 +53,6 @@ class LoginTest: PageObjectLogin() {
         exitLogin()
     }
 
-    fun exitLogin() {
-        if (textBool("News") == true) {
-            getElement("authorization_image_button").click();
-            waitElementAndroid("title")
-            getElementAndroid("title").click()
-        }
-    }
+
 }
 

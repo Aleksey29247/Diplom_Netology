@@ -8,12 +8,13 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class ToolsBarTest : PageObjectToolsBar(){
+class ToolsBarTest : PageObjectToolsBar() {
 
     val imageTrademark = "trademark_image_view"
+
     @Before
     fun mainPages() {
-      initPage()
+        initPage()
     }
 
     @Test
@@ -24,7 +25,7 @@ class ToolsBarTest : PageObjectToolsBar(){
 
     @Test
     fun menuClaimsTest() {
-       buttonClaimsClick()
+        buttonClaimsClick()
         assertEquals(result("Claims"), true)
     }
 
@@ -48,7 +49,7 @@ class ToolsBarTest : PageObjectToolsBar(){
 
     @Test
     fun ourMissionImageButtonTest() {
-       buttonProfel()
+        buttonProfel()
         assertEquals(result("Love is all"), true)
     }
 
