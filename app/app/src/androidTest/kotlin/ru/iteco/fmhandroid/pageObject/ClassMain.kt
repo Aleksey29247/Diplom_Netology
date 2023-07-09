@@ -6,7 +6,10 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.*
 
 
+
 open class ClassMain() {
+
+
     val MODEL_PACKAGE = "ru.iteco.fmhandroid"
     val TIMEOUT = 45000L
     val timeOutIn = 15000L
@@ -14,6 +17,13 @@ open class ClassMain() {
     private lateinit var device: UiDevice
 
 
+
+   /* fun initDriver():AndroidDriver{
+        thy {
+            val driver= new AndroidDriver(new URL(APPIUM_R))
+        }
+        return  driver;
+    }*/
     fun intistal() {
         device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         val context = ApplicationProvider.getApplicationContext<Context>()

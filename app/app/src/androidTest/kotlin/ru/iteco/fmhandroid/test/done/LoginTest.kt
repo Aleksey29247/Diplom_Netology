@@ -2,6 +2,7 @@ package ru.iteco.fmhandroid
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.*
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -9,7 +10,7 @@ import org.junit.runner.RunWith
 import org.junit.After
 
 
-@RunWith(AndroidJUnit4::class)
+@RunWith(AllureAndroidJUnit4::class)
 class LoginTest : PageObjectLogin() {
 
     @Before

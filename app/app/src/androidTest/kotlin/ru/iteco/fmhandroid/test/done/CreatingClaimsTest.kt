@@ -2,6 +2,7 @@ package ru.iteco.fmhandroid.test.done;
 ///ok
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.*
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -9,7 +10,7 @@ import org.junit.runner.RunWith
 import ru.iteco.fmhandroid.ClaimsCreatePageObject
 import java.util.*
 
-@RunWith(AndroidJUnit4::class)
+@RunWith(AllureAndroidJUnit4::class)
 class CreatingClaimsTest : ClaimsCreatePageObject() {
 
 

@@ -3618,7 +3618,6 @@ string claim_comments_load_error
 string claims
 string clear_text_end_icon_content_description
 string com_crashlytics_android_build_id
-string com_google_firebase_crashlytics_mapping_file_id
 string comment
 string common_google_play_services_unknown_issue
 string company_info

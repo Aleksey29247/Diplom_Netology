@@ -2,6 +2,7 @@ package ru.iteco.fmhandroid;
 
 import java.util.*
 
+
 open class ClaimsCreatePageObject : ClassMain() {
     val buttonAddClaims = "add_new_claim_material_button"
     val buttonMenu = "main_menu_image_button"

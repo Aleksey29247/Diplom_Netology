@@ -10,8 +10,16 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import ru.iteco.fmhandroid.PageObjectAbout
+import io.qameta.allure.AllureId
+import io.qameta.allure.Epic
+import io.qameta.allure.Feature
+import io.qameta.allure.Step
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
+import org.testng.annotations.AfterMethod
+import org.testng.annotations.BeforeMethod
 
-@RunWith(AndroidJUnit4::class)
+
+@RunWith(AllureAndroidJUnit4::class)
 class AboutPagesTest : PageObjectAbout() {
 
     val url1 = "https://vhospice.org/#/privacy-policy/"

@@ -2,13 +2,14 @@ package ru.iteco.fmhandroid.test.done;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.*
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import ru.iteco.fmhandroid.MainPagesPageObject
 
-@RunWith(AndroidJUnit4::class)
+@RunWith(AllureAndroidJUnit4::class)
 class MainPagesTest : MainPagesPageObject() {
     val buttonMenu = "expand_material_button"
     val buttonAllNews = "all_news_text_view"

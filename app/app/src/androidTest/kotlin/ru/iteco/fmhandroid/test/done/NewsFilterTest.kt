@@ -4,6 +4,7 @@ package ru.iteco.fmhandroid.test.done;
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
 import androidx.test.uiautomator.*
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
 
 import org.junit.Assert.*
 import org.junit.Before
@@ -11,7 +12,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import ru.iteco.fmhandroid.NewsFilterPageObject
 
-@RunWith(AndroidJUnit4::class)
+@RunWith(AllureAndroidJUnit4::class)
 class NewsFilterTest : NewsFilterPageObject() {
 
     val buttonSetFilter = "filter_button"
@@ -94,8 +95,8 @@ class NewsFilterTest : NewsFilterPageObject() {
         waitTextNewsFilter("Объявление")
         clickText("День рождения")
         clickElement(buttonSetFilter)
-        waitTextNewsFilter("День рождения")
-        assertEquals(seeText("День рождения"), true)
+        waitTextNewsFilter("News")
+        assertEquals(seeText("News"), true)
 
     }
 

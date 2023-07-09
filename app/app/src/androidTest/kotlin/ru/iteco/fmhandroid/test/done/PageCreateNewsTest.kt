@@ -2,13 +2,14 @@ package ru.iteco.fmhandroid.test.done;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.*
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import ru.iteco.fmhandroid.PagesNewsCreatePageObject
 
-@RunWith(AndroidJUnit4::class)
+@RunWith(AllureAndroidJUnit4::class)
 class PageCreateNewsTest : PagesNewsCreatePageObject() {
     val buttonSave = "save_button"
     val editText = "news_item_title_text_input_edit_text"
