@@ -1,0 +1,53 @@
+{
+    "name": "sortNewsMaterialButtonTest",
+    "start": 1688904972627,
+    "stop": 1688904986220,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "734549e2-f459-4375-984f-93493f1e00ae",
+    "historyId": "8d5aaad34b0cc8c3787ba62edcfcfdae",
+    "fullName": "ru.iteco.fmhandroid.test.done.NewsPagesTest.sortNewsMaterialButtonTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.NewsPagesTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "sortNewsMaterialButtonTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.NewsPagesTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4192)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

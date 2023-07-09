@@ -1,0 +1,53 @@
+{
+    "name": "editerCatigoryBirthdaysWithoutaDate1Test",
+    "start": 1688904699766,
+    "stop": 1688904708863,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "07a3dd80-82f8-422b-bc45-456dfbe60e63",
+    "historyId": "22a25ad96ce762b3758df2848ae2d4a0",
+    "fullName": "ru.iteco.fmhandroid.test.done.NewsFilterTest.editerCatigoryBirthdaysWithoutaDate1Test",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.NewsFilterTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "editerCatigoryBirthdaysWithoutaDate1Test"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.NewsFilterTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4187)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

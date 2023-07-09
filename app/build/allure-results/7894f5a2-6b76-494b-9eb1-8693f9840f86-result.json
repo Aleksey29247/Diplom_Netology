@@ -1,0 +1,53 @@
+{
+    "name": "filtersMaterialButtonOpenTest",
+    "start": 1688903399495,
+    "stop": 1688903417680,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "7894f5a2-6b76-494b-9eb1-8693f9840f86",
+    "historyId": "dddee94180815e6b112cab14f218db1b",
+    "fullName": "ru.iteco.fmhandroid.test.done.ClaimsPagesTest.filtersMaterialButtonOpenTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.ClaimsPagesTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "filtersMaterialButtonOpenTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.ClaimsPagesTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4137)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

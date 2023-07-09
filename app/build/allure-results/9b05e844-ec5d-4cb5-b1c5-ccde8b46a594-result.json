@@ -1,0 +1,53 @@
+{
+    "name": "activeFalseNotActiverTrueTest",
+    "start": 1688903727726,
+    "stop": 1688903746548,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "9b05e844-ec5d-4cb5-b1c5-ccde8b46a594",
+    "historyId": "c625ed5fccec4e4b61aa2d749a002c61",
+    "fullName": "ru.iteco.fmhandroid.test.done.ControlPanelFilterNewsTest.activeFalseNotActiverTrueTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.ControlPanelFilterNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "activeFalseNotActiverTrueTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.ControlPanelFilterNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4142)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "filtersMaterialButtontOpenInProgressCancelled",
+    "start": 1688902811049,
+    "stop": 1688902836756,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "db2a2d85-7383-4918-ab97-4dfecc1c0a59",
+    "historyId": "6a66a88e7ad0ae3acb1f3fd26c31a93c",
+    "fullName": "ru.iteco.fmhandroid.test.done.ClaimsPagesTest.filtersMaterialButtontOpenInProgressCancelled",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.ClaimsPagesTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "filtersMaterialButtontOpenInProgressCancelled"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.ClaimsPagesTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4127)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

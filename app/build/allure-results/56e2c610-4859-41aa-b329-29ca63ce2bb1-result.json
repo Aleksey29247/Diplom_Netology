@@ -1,0 +1,53 @@
+{
+    "name": "editerCatigoryTradeUnionDate2Test",
+    "start": 1688904831491,
+    "stop": 1688904846286,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "56e2c610-4859-41aa-b329-29ca63ce2bb1",
+    "historyId": "937a2c011a24213adafde1e7b30433f2",
+    "fullName": "ru.iteco.fmhandroid.test.done.NewsFilterTest.editerCatigoryTradeUnionDate2Test",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.NewsFilterTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "editerCatigoryTradeUnionDate2Test"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.NewsFilterTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4187)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

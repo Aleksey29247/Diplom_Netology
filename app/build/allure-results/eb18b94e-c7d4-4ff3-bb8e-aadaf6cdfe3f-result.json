@@ -1,0 +1,53 @@
+{
+    "name": "menuNewsTest",
+    "start": 1688905120017,
+    "stop": 1688905129033,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "eb18b94e-c7d4-4ff3-bb8e-aadaf6cdfe3f",
+    "historyId": "98da7ecb01565e2a6a9a5d344d434ed2",
+    "fullName": "ru.iteco.fmhandroid.ToolsBarTest.menuNewsTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ToolsBarTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "menuNewsTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ToolsBarTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4202)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

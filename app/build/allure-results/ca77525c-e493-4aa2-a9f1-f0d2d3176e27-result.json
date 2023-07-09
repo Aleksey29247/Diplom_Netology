@@ -1,0 +1,53 @@
+{
+    "name": "normalDataTwoTest",
+    "start": 1688904206491,
+    "stop": 1688904230109,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "ca77525c-e493-4aa2-a9f1-f0d2d3176e27",
+    "historyId": "ced68d949578297228474807367c0152",
+    "fullName": "ru.iteco.fmhandroid.test.done.ControlPanelFilterNewsTest.normalDataTwoTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.ControlPanelFilterNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "normalDataTwoTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.ControlPanelFilterNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4162)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

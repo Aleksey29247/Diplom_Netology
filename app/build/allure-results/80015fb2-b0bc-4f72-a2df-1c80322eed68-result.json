@@ -1,0 +1,53 @@
+{
+    "name": "allNewsTextViewTest",
+    "start": 1688904511130,
+    "stop": 1688904519085,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "80015fb2-b0bc-4f72-a2df-1c80322eed68",
+    "historyId": "3a6af1750062322dc7009241ecf7b01f",
+    "fullName": "ru.iteco.fmhandroid.test.done.MainPagesTest.allNewsTextViewTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.MainPagesTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "allNewsTextViewTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.MainPagesTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4182)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

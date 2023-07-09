@@ -1,0 +1,53 @@
+{
+    "name": "testLoginTruePasswordFalse",
+    "start": 1688904425526,
+    "stop": 1688904447911,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "0dc11925-4781-4ea9-9f8c-dc4d270920a4",
+    "historyId": "3912223aa37538348c3b5cea31eedb4c",
+    "fullName": "ru.iteco.fmhandroid.LoginTest.testLoginTruePasswordFalse",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.LoginTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "testLoginTruePasswordFalse"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.LoginTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4178)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

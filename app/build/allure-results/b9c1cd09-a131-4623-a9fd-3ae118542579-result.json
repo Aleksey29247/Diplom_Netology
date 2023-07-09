@@ -1,0 +1,53 @@
+{
+    "name": "expandMaterialButtonUpDownTest",
+    "start": 1688904487631,
+    "stop": 1688904511012,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "b9c1cd09-a131-4623-a9fd-3ae118542579",
+    "historyId": "f2bf2bc62e8109b07c4f528f6e5c71f7",
+    "fullName": "ru.iteco.fmhandroid.test.done.MainPagesTest.expandMaterialButtonUpDownTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.MainPagesTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "expandMaterialButtonUpDownTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.MainPagesTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4182)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

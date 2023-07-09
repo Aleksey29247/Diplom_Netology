@@ -1,0 +1,53 @@
+{
+    "name": "titleEditText50CharTest",
+    "start": 1688904371110,
+    "stop": 1688904384654,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "6f01513a-799b-4149-ad87-e33b01cb7498",
+    "historyId": "5fd720e4aefc3412dc44e3660972139",
+    "fullName": "ru.iteco.fmhandroid.test.done.CreatingClaimsTest.titleEditText50CharTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.CreatingClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "titleEditText50CharTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.CreatingClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4172)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "clickImageTest",
+    "start": 1688905113413,
+    "stop": 1688905119938,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "a9196350-9d4d-4b2d-98ce-5dcb942c7a92",
+    "historyId": "f2a706fa8121b97770125b6cc4b1dcc2",
+    "fullName": "ru.iteco.fmhandroid.ToolsBarTest.clickImageTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ToolsBarTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "clickImageTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ToolsBarTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4202)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

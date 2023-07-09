@@ -1,0 +1,53 @@
+{
+    "name": "timeBack1HTest",
+    "start": 1688904345959,
+    "stop": 1688904358877,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "978938e3-1cc4-4189-aa64-eb830ed9cd20",
+    "historyId": "3daaeab31045969ccc20f2d6cc817c36",
+    "fullName": "ru.iteco.fmhandroid.test.done.CreatingClaimsTest.timeBack1HTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.CreatingClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "timeBack1HTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.CreatingClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4172)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

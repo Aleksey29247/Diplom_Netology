@@ -1,0 +1,53 @@
+{
+    "name": "sortNewsMaterialButtonZXYTest",
+    "start": 1688904265595,
+    "stop": 1688904278168,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "34f92c53-36d0-4a08-b8cd-959c780554c1",
+    "historyId": "cc79a6aa3c0f5abc96090c5f67448b18",
+    "fullName": "ru.iteco.fmhandroid.test.done.ControlPanelNewsTest.sortNewsMaterialButtonZXYTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.ControlPanelNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "sortNewsMaterialButtonZXYTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.ControlPanelNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4167)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

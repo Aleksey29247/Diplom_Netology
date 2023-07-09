@@ -1,0 +1,53 @@
+{
+    "name": "mainMenuButtonTest",
+    "start": 1688905129114,
+    "stop": 1688905137314,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "7e91cc44-3975-4cc1-98af-86bf640ed292",
+    "historyId": "e9b8a82f2ee3cae19d8da51cf5f22401",
+    "fullName": "ru.iteco.fmhandroid.ToolsBarTest.mainMenuButtonTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ToolsBarTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "mainMenuButtonTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ToolsBarTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4202)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

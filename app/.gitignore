@@ -2,7 +2,6 @@ reserve.md
 HELP.md
 .gradle
 google-services.json
-build/
 app/release/
 
 ### STS ###

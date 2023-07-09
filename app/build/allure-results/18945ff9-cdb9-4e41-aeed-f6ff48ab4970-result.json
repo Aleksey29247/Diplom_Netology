@@ -1,0 +1,53 @@
+{
+    "name": "privacyPoliceTest",
+    "start": 1688902569673,
+    "stop": 1688902581027,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "18945ff9-cdb9-4e41-aeed-f6ff48ab4970",
+    "historyId": "77d1ec3729b1041ac6ad677ba85e2260",
+    "fullName": "ru.iteco.fmhandroid.test.done.AboutPagesTest.privacyPoliceTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.test.done"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.test.done.AboutPagesTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "privacyPoliceTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.test.done.AboutPagesTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(4122)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
